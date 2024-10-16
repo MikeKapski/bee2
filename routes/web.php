@@ -2,11 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\RoutingController;
 
 
     /*Frontend Routing*/
-Route::get('/', 'RoutingController@mainpage');
-Route::get('/uslovia-prokata', 'RoutingController@uslovia');
+    Route::get('/', [RoutingController::class, 'mainpage']);
+
+
+
+/*Route::get('/uslovia-prokata', 'RoutingController@uslovia');
 Route::get('/oplata',   'RoutingController@oplatapage');
 Route::get('/o-kompanii', 'RoutingController@okompanii');
 Route::get('/contacts', 'RoutingController@contactspage');
@@ -23,6 +27,6 @@ Route::get('/arenda-gruzovyh-auto', 'RoutingController@CargoAuto');
 	
 	
 Route::get('/promo', 'RoutingController@Promo');
-Route::get('/promo/{slug}', 'RoutingController@PromoSingle');
+Route::get('/promo/{slug}', 'RoutingController@PromoSingle');*/
 
 
