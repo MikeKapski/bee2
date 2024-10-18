@@ -238,58 +238,37 @@
                 <h1>Аренда автомобилей</h2>
             </div>
             <div class="cars-on-mainpage-wrapper">
+                    @foreach ($CarsAll as $car)
+                    <div class="main-car-card">
+                            <div class="main-car-card-sidecolor"></div>
+                            <div class="main-car-card-content">
+                                <div class="row-100">
+                                </div>
+                            </div>
+                    </div>
+                    @endforeach
                 
                 <?  
                     if(!empty($CarsAll)){
-                        foreach($CarsAll as &$row){
+                        var_dump($CarsAll);
+                        
                 ?>
                 
                         <div class="main-car-card">
                             <div class="main-car-card-sidecolor"></div>
                             <div class="main-car-card-content">
                                 <div class="row-100">
-                                    <h2><a href="{{ $row['PageUrl'] }}">{{ $row['Name'] }}</a></h2>
+                                   
                                 </div>
-                                <div class="row-100 FastIMage">
-                                    <div id="Lazy_Car_{{ $row['ID'] }}" class="LazyUpload" data-car="{{ $row['ID'] }}" data-src="{{ $row['CarImage'] }}" data-href="{{ $row['PageUrl'] }}">
-                                        <img src="/img/car_sl.png" >
-                                    </div>
-                                    <div class="main-cars-tech">
-                                        <ul>
-                                            <li>Автомат</li>
-                                            <li>5 мест</li>
-                                            <li>Кондиционер</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="row-100 main-car-card-order-price">
-                                    <div id="CarPrice_{{ $row['ID'] }}" class="button-fast-order-price">
-                                        от <span>{{ $row['Price_4'] }}</span> 
-                                    </div>
-                                    <div class="button-days-cols">
-                                        Количество дней от:
-                                    </div>
-                                </div>
-                                <div class="row-100 main-car-card-order-but">
-                                    <div class="button-fast-order-but {{ $OrderAction }}" data-carid="{{ $row['ID'] }}" data-href="{{ $row['PageUrl'] }}">
-                                        Заказать
-                                    </div>
-                                    <div id="CarDays_{{ $row['ID'] }}" class="main-cars-days" data-carid="{{ $row['ID'] }}">
-                                        <ul>
-                                            <li data-price-value="{{ $row['Price_1'] }}">1</li>
-                                            <li data-price-value="{{ $row['Price_2'] }}">5</li>
-                                            <li data-price-value="{{ $row['Price_3'] }}">10</li>
-                                            <li class="active-car-card" data-price-value="{{ $row['Price_4'] }}">30</li>
-                                        </ul>
-                                    </div>
-                                </div>	
+                              
+                                
                             </div>
                         </div>
                 
                 
                 <?  
                         }
-                    }
+                    
                 ?>
             </div>
             <!--<div class="promo-cargo-show-all"><a href="">Посмотреть все автомобили</a></div>-->
@@ -297,7 +276,7 @@
     </div>
 
  
-@include('components.promo.black_line_promo')
+
 
 
 
@@ -323,17 +302,6 @@
 
 
 
-@include('components.ordersteps.stepsmini')
-    
-@include('components.blocks.beecars')
-
-@include('components.blocks.send-question-banner')
-
-@include('components.promo.cargo-banner')
-
-
-
-@include('components.blocks.reviews')
 
 
 
