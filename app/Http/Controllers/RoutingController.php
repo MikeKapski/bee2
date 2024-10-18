@@ -22,9 +22,10 @@ use Cars;
 			/*MainPage*/
 			function mainpage(){
 
-				//$CarsAll = Cars::ReturnAllCarsListBYType(1);
-				//return view('html.mainpage',['CarsAll' => $CarsAll]);
-                return view('html.mainpage');
+				$CarsAll = Cars::ReturnAllCarsListBYType(1);
+				//var_dump($CarsAll);
+				return view('html.mainpage',['CarsAll' => $CarsAll]);
+                //return view('html.mainpage');
 
 			}
 			/*Park Auto*/

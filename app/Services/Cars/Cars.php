@@ -22,6 +22,30 @@
 
 	class Cars{
 
+		function ReturnAllCarsListBYType($CarType){
+
+			$i=0;
+			$Arr = array();
+			$RES = CarsModel::where('CarType', '=', $CarType)->orderBy('Orders', 'ASC')->get();
+			foreach($RES as &$row){	
+				$Arr[$i]['ID']       = $row->ID;
+				$Arr[$i]['Name']     = $row->Name;
+				$Arr[$i]['PageUrl']  = $row->PageUrl;
+				//$Arr[$i]['CarImage'] = self::ReturnCarImage($row->ID,1);
+				
+				$Arr[$i]['Price_1'] = $row->Price_1;
+				$Arr[$i]['Price_2'] = $row->Price_2;
+				$Arr[$i]['Price_3'] = $row->Price_3;
+				$Arr[$i]['Price_4'] = $row->Price_4;
+				
+				//$Arr[$i]['CarText'] = $row->CarText;
+				
+				$i++;
+			}
+			return $Arr;
+			//return "12";
+		}
+
 		public static function FullTableCarsList(){
 			
 			return CarsModel::with("car_statuses")->where('car_history_id', 1)->get()->toArray();
