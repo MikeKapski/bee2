@@ -7,6 +7,8 @@
     --font-family: "Montserrat", sans-serif;
     --second-family: "Inter", sans-serif;
 
+    --gray-background:#f5f5f5;
+
     --color-black:#000;
 }
 
@@ -101,7 +103,7 @@ a {
     box-sizing: border-box;
     width:100%;
    /* max-width: 1440px;*/
-    padding:0 135px;
+    
     background: var(--bg-white);
     border-radius: var(--br-xl);
 }
@@ -119,11 +121,67 @@ a {
             font-family: var(--font-family);
             font-weight: 900;
             font-size: 32px;
-            color: #000;
+            color:var(--color-black);
         }
         .brand_logo_text{
             font-family: var(--font-family);
             font-weight: 300;
             font-size: 12px;
-            color: #000;
+            color:var(--color-black);
         }
+
+        /*Brands Contacts*/
+        .brand_contacts{
+            align-self: center;
+            justify-self: center;
+        }
+        .phone-header{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 117%;
+            color:var(--color-black);
+        }
+        .phone-header a{ color: #000; }
+        .phone-adress{
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 156%;
+            color:var(--color-black);
+        }
+        /*Brands_time*/
+        .brands_time{
+            align-self: center;
+            justify-self: center;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 146%;
+            color:var(--color-black);
+        }
+        .brands_time span{
+            font-size: 12px;
+        }
+
+        /*Header_Menu*/
+        .head_menu{
+            background: var(--gray-background);
+        }
+        .mainmenu{
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            padding: 8px 0px;
+        }
+        .mainmenu a{
+            color:var(--color-black);
+        }
+
+    /*Tech styles*/
+    .padd_0_135{padding:0 135px;}
