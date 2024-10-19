@@ -1,7 +1,20 @@
 	  
 	@inject('Detect', 'App\Http\Controllers\DetectController')
+
+
+    <header class="bee_head">
+      <div class="head_info">
+        <div class="brand_logo">
+            <a href="https://bee-cars.ru/" class="logostyle">
+                <div class="brand_logo_company">БИ КАРС</div>
+                <div class="brand_logo_text">АВТОПРОКАТ</div>
+            </a>
+        </div>
+      </div>
+      <div class="head_menu">1234</div>
+    </header
 	
-	<? if ($Detect->isMobile() || $Detect->isTablet()) { ?>
+	@php if ($Detect->isMobile() || $Detect->isTablet()) { @endphp
 	
 		<div class="Mobile_Slide_Pop" id="WMap">
 			<div class="Mobile_Filters_Head">
@@ -50,7 +63,7 @@
 			</ul>
 		</div>
 		
-	<? }else{ ?>	
+    @php }else{ @endphp	
 	
 		<div class="RightSidebar">
 			<div class="RightSidebarItem">
@@ -143,4 +156,4 @@
 			</div>
 		</header>
 		
-	<? } ?>		
+    @php } @endphp	
