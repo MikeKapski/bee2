@@ -23,6 +23,33 @@
             Круглосуточная доставка автомобилей<br>
             <span>(при бронировании в рабочее время)</span>
         </div>
+        <div class=header-actions>
+            <div class="HeaderItem">
+				<a href="https://wa.me/74957903633"><div class="whatsapp_call"></div></a>
+			</div>
+            <div class="HeaderItem">
+				<a href="https://wa.me/74957903633"><div class="telegram_call"></div></a>
+			</div>
+            <div class="HeaderItem" id="menu">
+                <div id="butoon-header">
+					
+					<div class="show-menu-desctop">
+						<label for="show-menu-desctop">
+						  <input type="checkbox" id="show-menu-desctop"> 
+						  <span></span>
+						  <span></span>
+						  <span></span>
+						</label>
+					</div>
+					<!--<div class="callme"   target="callmerepeat">Перезвоните мне!</div>
+					<div class="personal" target="callmerepeat">123</div>-->
+					
+					
+					<!-- Right Menu --> 
+					<!--<div class="RightSlideMenu" style="overflow: hidden; padding: 0px; width: 928.328px;"></div>-->
+				</div>
+			</div>
+        </div>
       </div>
       <div class="head_menu padd_0_135">
             <ul class="mainmenu">
@@ -82,91 +109,5 @@
 				<li><a href="/contacts/">Контакты</a></li>
 			</ul>
 		</div>
-		
-    @php }else{ @endphp	
-	
-		<div class="RightSidebar">
-			<div class="RightSidebarItem">
-				<a href="https://wa.me/74957903633"><div class="whatsapp_call"></div></a>
-			</div>
-			<div class="RightSidebarItem">
-				<div class="gototop"></div>
-			</div>
-		</div>
-		<header>
-			<nav>
-				<div id="brand">
-				  <div id="logo">
-					<a href="https://bee-cars.ru/" class="logostyle">
-						<span class="color_orange">Би карс</span>
-						<img height="40" width="40" src="/img/bbcars_logo_pin.png" alt="Би Карс" title="Прокат автомобилей в Москве bee-cars.ru">
-						<span class="color_black">автопрокат</span>
-					</a>
-					
-				  </div>
-				</div>
-				<div id="menu">
-				  <div id="menu-toggle">
-					<div id="menu-icon">
-					  <div class="bar"></div>
-					  <div class="bar"></div>
-					  <div class="bar"></div>
-					</div>
-				  </div>
-				  
-				</div>
-				<div id="butoon-header">
-					
-					<div class="show-menu-desctop">
-						<label for="show-menu-desctop">
-						  <input type="checkbox" id="show-menu-desctop"/> 
-						  <span></span>
-						  <span></span>
-						  <span></span>
-						</label>
-					</div>
-					<!--<div class="callme"   target="callmerepeat">Перезвоните мне!</div>
-					<div class="personal" target="callmerepeat">123</div>-->
-					
-					
-					<!-- Right Menu --> 
-					<div class="RightSlideMenu">
-						
-					</div>
-				</div>
-				<div class="full_page_show">
-					
-				</div>
-			</nav>
-		  <div id="hero-section">
-			<div id="head-line"></div>
-		  </div>
-			<!-- ORder window --> 
-			<div class="RightSlideOrder">
-				<h2>Заказ Автомобиля</h2>
-				
-				<div class="OrderInfoSlide">
-					<div class="OrderInfoSlideRow">
-						<div class="OrderInfoSlideRowLabel">ФИО</div>
-						<input class="InputOnWhiteTextaR w100px" type="text">
-					</div>
-					<div class="OrderInfoSlideRow">
-						<div class="OrderInfoSlideRowLabel">Телефон</div>
-						<input class="InputOnWhiteTextaR w100px" type="text">
-					</div>
-					
-				</div>
-				
-				
-				<div class="RightSlideOrderCar">
-					
-					
-					<div class="AnotherCar">
-						<div class="AnotherCarText">Другой автомобиль?</div>
-					</div>
-				</div>
-				<div class="RightSlideOrderCarClose"></div>
-			</div>
-		</header>
 		
     @php } @endphp	
