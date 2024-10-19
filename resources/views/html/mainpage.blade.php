@@ -22,7 +22,7 @@
     
 
     @php if (!$Detect->isMobile() && !$Detect->isTablet()) { @endphp
-    <div class="index_top_block">
+    <div class="index_top_block padd_0_135">
         <div class="slider">
             <ul id="lightSlider">
                 <li>
@@ -230,13 +230,15 @@
         </div>
     </div>
     @php } @endphp
-    
-    
-    <div class="cars-on-mainpage">
-        <div class="row-100">
-            <div class="row-100" style="flex-direction:row;">
-                <h1>Аренда автомобилей</h2>
-            </div>
+
+    <div class="central_block">
+
+        <div class="left_block_content">
+            1234344
+        </div>
+
+        <div class="cars-on-mainpage">
+            
             <div class="cars-on-mainpage-wrapper">
                 @isset($CarsAll)
                     @foreach ($CarsAll as $car)
@@ -279,6 +281,11 @@
             <!--<div class="promo-cargo-show-all"><a href="">Посмотреть все автомобили</a></div>-->
         </div>
     </div>
+
+    </div>
+    
+    
+ 
 
  
 
