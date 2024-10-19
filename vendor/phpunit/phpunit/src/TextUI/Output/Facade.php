@@ -77,7 +77,7 @@ final class Facade
     }
 
     /**
-     * @psalm-param ?array<string, TestResultCollection> $testDoxResult
+     * @param ?array<string, TestResultCollection> $testDoxResult
      */
     public static function printResult(TestResult $result, ?array $testDoxResult, Duration $duration): void
     {
@@ -206,7 +206,7 @@ final class Facade
                 self::$printer,
                 true,
                 true,
-                true,
+                $configuration->displayDetailsOnPhpunitDeprecations(),
                 false,
                 false,
                 true,
@@ -225,6 +225,7 @@ final class Facade
                 self::$printer,
                 $configuration->colors(),
                 $configuration->columns(),
+                $configuration->testDoxOutputWithSummary(),
             );
         }
 
@@ -240,7 +241,7 @@ final class Facade
             self::$printer,
             true,
             true,
-            true,
+            $configuration->displayDetailsOnPhpunitDeprecations(),
             true,
             true,
             true,
