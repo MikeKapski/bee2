@@ -11,7 +11,7 @@
         $OrderAction = "FastDesctop";
 
     @endphp
-    <div class="defaultpage">
+    <div class="defaultpage padd_0_135">
     @php } @endphp
     @php 
     if ($Detect->isMobile() || $Detect->isTablet()) { 
