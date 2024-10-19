@@ -238,16 +238,30 @@
                 <h1>Аренда автомобилей</h2>
             </div>
             <div class="cars-on-mainpage-wrapper">
+                @isset($CarsAll)
                     @foreach ($CarsAll as $car)
                     <div class="main-car-card">
                             <div class="main-car-card-sidecolor"></div>
                             <div class="main-car-card-content">
                                 <div class="row-100">
+									<h2><a href="{{ $car['PageUrl'] }}">{{ $car['Name'] }}</a></h2>
                                 </div>
+                                <div class="row-100 FastIMage">
+									<div id="Lazy_Car_{{ $car['ID'] }}" class="LazyUpload" data-car="{{ $car['ID'] }}" data-src="" data-href="{{ $car['PageUrl'] }}">
+										<img src="/img/car_sl.png" >
+									</div>
+									<div class="main-cars-tech">
+										<ul>
+											<li>Автомат</li>
+											<li>5 мест</li>
+											<li>Кондиционер</li>
+										</ul>
+									</div>
+								</div>
                             </div>
                     </div>
                     @endforeach
-                
+                @endisset
                 <?  
                     if(!empty($CarsAll)){
                         var_dump($CarsAll);
