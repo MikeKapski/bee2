@@ -3,15 +3,35 @@
 
 
     <header class="bee_head">
-      <div class="head_info">
+      <div class="head_info padd_0_135">
         <div class="brand_logo">
             <a href="https://bee-cars.ru/" class="logostyle">
                 <div class="brand_logo_company">БИ КАРС</div>
                 <div class="brand_logo_text">АВТОПРОКАТ</div>
             </a>
         </div>
+        <div class="brand_contacts">
+            <div class="phone-header">
+				<a href="tel:+74957903633" alt="Перезвоните мне, прокат автомобилей bee-cars.ru">+7 (495) 790-36-33</a>
+			</div>
+            <div class="phone-adress">
+                Москва Нежинская дом 5
+			</div>
+        </div>
+        <div class="brands_time">
+            Ежедневно с 10:00 до 23:00<br>
+            Круглосуточная доставка автомобилей<br>
+            <span>(при бронировании в рабочее время)</span>
+        </div>
       </div>
-      <div class="head_menu">1234</div>
+      <div class="head_menu padd_0_135">
+            <ul class="mainmenu">
+				<li><a class="activemenu" href="https://bee-cars.ru/">Главная</a></li>
+				<li><a class="" href="/uslovia-prokata/">Условия проката</a></li>
+				<li><a class="" href="/o-kompanii/">О компании</a></li>
+				<li><a class="" href="/contacts/">Контакты</a></li>
+			</ul>
+      </div>
     </header
 	
 	@php if ($Detect->isMobile() || $Detect->isTablet()) { @endphp
@@ -93,17 +113,10 @@
 					  <div class="bar"></div>
 					</div>
 				  </div>
-				  <ul class="mainmenu">
-					<li><a class="activemenu" href="https://bee-cars.ru/">Главная</a></li>
-					<li><a class="activemenu" href="/uslovia-prokata/">Условия проката</a></li>
-					<li><a class="activemenu" href="/o-kompanii/">О компании</a></li>
-					<li><a class="activemenu" href="/contacts/">Контакты</a></li>
-				  </ul>
+				  
 				</div>
 				<div id="butoon-header">
-					<div class="phone-header">
-						<a href="tel:+74957903633" alt="Перезвоните мне, прокат автомобилей bee-cars.ru">+7 (495) 790-36-33</a>
-					</div>
+					
 					<div class="show-menu-desctop">
 						<label for="show-menu-desctop">
 						  <input type="checkbox" id="show-menu-desctop"/> 

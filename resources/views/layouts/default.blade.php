@@ -20,7 +20,7 @@
 		
 		<!-- google font -->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,900&amp;subset=cyrillic&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700,900&amp;subset=cyrillic&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
 		
 		<!-- yandex maps -->

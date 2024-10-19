@@ -6,22 +6,22 @@
 
 
 
-<? 
+@php 
     if (!$Detect->isMobile() && !$Detect->isTablet()) { 
         $OrderAction = "FastDesctop";
 
-?>
+    @endphp
     <div class="defaultpage">
-<? } ?>
-<? 
+    @php } @endphp
+    @php 
     if ($Detect->isMobile() || $Detect->isTablet()) { 
         $OrderAction = "FastMobile";
-?>
+        @endphp
     <div class="mobilepage">	
-<? } ?>
+    @php } @endphp
     
 
-    <? if (!$Detect->isMobile() && !$Detect->isTablet()) { ?>
+    @php if (!$Detect->isMobile() && !$Detect->isTablet()) { @endphp
     <div class="index_top_block">
         <div class="slider">
             <ul id="lightSlider">
@@ -183,9 +183,9 @@
             </ul>
         </div>-->
     </div>
-    <? } ?>	
+    @php } @endphp	
         
-    <? if ($Detect->isMobile() || $Detect->isTablet()) { ?>
+    @php if ($Detect->isMobile() || $Detect->isTablet()) { @endphp
         
     <div class="index_top_block_mobile">
         <div class="slider" id="mainpageslider">
@@ -229,7 +229,7 @@
             </ul>
         </div>
     </div>
-    <? } ?>	
+    @php } @endphp
     
     
     <div class="cars-on-mainpage">
@@ -268,16 +268,7 @@
                         
                 ?>
                 
-                        <div class="main-car-card">
-                            <div class="main-car-card-sidecolor"></div>
-                            <div class="main-car-card-content">
-                                <div class="row-100">
-                                   
-                                </div>
-                              
-                                
-                            </div>
-                        </div>
+                       
                 
                 
                 <?  
