@@ -261,6 +261,32 @@ a {
             padding: 20px 0;
             background-color: #ffbf00;
             background: linear-gradient(to bottom, #F7B425 0%, #fcd45f 50%, #F7B425 100%);
+            box-sizing: border-box;
+        }
+
+        .central_block{
+            display: grid;
+            grid-template-columns: 270px auto;
+            padding:40px 135px;
+            gap:32px;
+        }
+
+        /*Cars on mainpage*/
+        .cars-on-mainpage-wrapper {
+            width: 100%;
+            background: #FFF;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            box-sizing: border-box;
+            gap: 30px;
+        }
+        .main-car-card {
+            background: #FFF;
+            position: relative;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 30px -5px rgb(0 0 0 / 20%);
+            padding: 10px;
+            box-sizing: border-box;
         }
 
     /*Tech styles*/
