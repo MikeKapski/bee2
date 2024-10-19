@@ -81,10 +81,10 @@
 					</div>
 				  </div>
 				  <ul class="mainmenu">
-					<li><a class="{{ \Request::is('/') ? 'activemenu' : '' }}" href="https://bee-cars.ru/">Главная</a></li>
-					<li><a class="{{ \Request::is('uslovia-prokata') ? 'activemenu' : '' }}" href="/uslovia-prokata/">Условия проката</a></li>
-					<li><a class="{{ \Request::is('o-kompanii') ? 'activemenu' : '' }}" href="/o-kompanii/">О компании</a></li>
-					<li><a class="{{ \Request::is('contacts') ? 'activemenu' : '' }}" href="/contacts/">Контакты</a></li>
+					<li><a class="activemenu" href="https://bee-cars.ru/">Главная</a></li>
+					<li><a class="activemenu" href="/uslovia-prokata/">Условия проката</a></li>
+					<li><a class="activemenu" href="/o-kompanii/">О компании</a></li>
+					<li><a class="activemenu" href="/contacts/">Контакты</a></li>
 				  </ul>
 				</div>
 				<div id="butoon-header">
