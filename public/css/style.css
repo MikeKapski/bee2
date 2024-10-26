@@ -157,13 +157,14 @@ a {
             font-size: 20px;
             line-height: 117%;
             color:var(--color-black);
+            padding-bottom: 10px;
         }
 
         .phone-header a{ 
             color: var(--color-black);
             padding-left: 40px;
             position: relative;
-            padding-bottom: 10px;
+            
         }
         .phone-header a:before{ 
             content: "";
