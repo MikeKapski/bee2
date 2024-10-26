@@ -118,6 +118,20 @@ a {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
         /*Brand Logo*/
+        .brand_logo{
+            position: relative;
+            padding-left: 70px;
+        }
+        .brand_logo:before {
+            content: "";
+            position: absolute;
+            background: url(/img/beecars_logo.svg);
+            width: 63px;
+            height: 61px;
+            background-size: 100% 100%;
+            top: 0px;
+            left: 0px;
+        }
         .brand_logo_company{
             font-family: var(--font-family);
             font-weight: 900;
@@ -284,9 +298,20 @@ a {
             background: #FFF;
             position: relative;
             margin-bottom: 30px;
-            box-shadow: 0 4px 30px -5px rgb(0 0 0 / 20%);
-            padding: 10px;
+            box-shadow: 0 4px 10px -5px rgb(0 0 0 / 20%);
             box-sizing: border-box;
+        }
+        .main-car-card-content h2{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color:var(--color-black);
+            padding: 10px;
+        }
+        .main-car-card-content h2 a{
+            color:var(--color-black);
         }
 
     /*Tech styles*/
