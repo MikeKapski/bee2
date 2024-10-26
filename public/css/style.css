@@ -9,6 +9,7 @@
 
     --gray-background:#f5f5f5;
     --black-background:#000;
+    --gray-background:#DDDDDD;
 
     --color-black:#000;
 }
@@ -157,13 +158,41 @@ a {
             line-height: 117%;
             color:var(--color-black);
         }
-        .phone-header a{ color: #000; }
+
+        .phone-header a{ 
+            color: var(--color-black);
+            padding-left: 40px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .phone-header a:before{ 
+            content: "";
+            position: absolute;
+            background: url(/img/icons/PhoneVibrate.svg);
+            width:34px;
+            height:31px;
+            background-size: 100% 100%;
+            top: -3px;
+            left: 0px;
+        }
         .phone-adress{
             font-family: var(--font-family);
             font-weight: 400;
             font-size: 15px;
             line-height: 156%;
             color:var(--color-black);
+            padding-left: 40px;
+            position: relative;
+        }
+        .phone-adress:before{ 
+            content: "";
+            position: absolute;
+            background: url(/img/icons/Adress.svg);
+            width:18px;
+            height:23px;
+            background-size: 100% 100%;
+            top: -3px;
+            left:8px;
         }
         /*Brands_time*/
         .brands_time{
@@ -312,6 +341,38 @@ a {
         }
         .main-car-card-content h2 a{
             color:var(--color-black);
+        }
+        /*Days On Maincards*/
+        .main-cars-days {
+        }
+        .main-cars-days ul {
+            position: relative;
+            flex-flow: row;
+            font-size: 14px;
+            font-weight: 400;
+            color: #551a8b;
+            display: flex;
+            text-transform: uppercase;
+            align-items: flex-end;
+            top: 2px;
+        }
+        .main-cars-days ul li {
+            outline: 0;
+            border: 0;
+            background: var(--gray-background);
+            padding: 8px 5px;
+            box-sizing: border-box;
+            width:40px;
+            color:var(--color-black);
+            text-transform: uppercase;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+            font-weight:600;
+            text-align: center;
+            font-size: 18px;
+            box-sizing: border-box;
+            cursor: pointer;
+            box-shadow: 0 4px 30px -5px rgb(0 0 0 / 20%);
         }
 
     /*Tech styles*/
