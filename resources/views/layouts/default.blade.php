@@ -31,12 +31,13 @@
 		<link rel="dns-prefetch" href="//yastatic.net">
 		
 		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="/img/favicon/favicon-48x48.png" sizes="48x48" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
 		<link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
 		<link rel="shortcut icon" href="/img/favicon/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
 		<meta name="apple-mobile-web-app-title" content="BeeCars" />
-		<link rel="manifest" href="/img/favicon/site.webmanifest" />
+		<link rel="manifest" href="/site.webmanifest">
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 			
