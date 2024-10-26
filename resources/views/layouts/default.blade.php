@@ -31,21 +31,18 @@
 		<link rel="dns-prefetch" href="//yastatic.net">
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="/favicon/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-		<link rel="manifest" href="/favicon/site.webmanifest">
-		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="icon" type="image/png" href="/img/favicon/favicon-48x48.png" sizes="48x48" />
+		<link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
+		<link rel="shortcut icon" href="/img/favicon/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+		<meta name="apple-mobile-web-app-title" content="BeeCars" />
+		<link rel="manifest" href="/img/favicon/site.webmanifest" />
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
-		
-		
 			
 		<!-- main style -->
 		<link rel="stylesheet" type="text/css" href="/css/style.css" />
-		<link rel="stylesheet" type="text/css" href="/css/kh.css" />
-
+		
 			
 
 	</head>
