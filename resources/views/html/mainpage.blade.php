@@ -22,14 +22,24 @@
     
 
     @php if (!$Detect->isMobile() && !$Detect->isTablet()) { @endphp
-    <div class="index_top_block padd_0_135">
-        <div class="slider">
-            <ul id="lightSlider">
-                
-                
-               
-               
-            </ul>
+    <div class="index_top_block">
+        <div class="central_block_slider">
+            <div class="central_block_left">
+                <div><h1>Автопрокат "Би Карс" </h1></div>
+                <div class="central_block_left_text">
+                Посуточная аренда<br> 
+                автомобилей в Москве
+                </div>
+                <div class="central_block_left_ul">
+                    <div><div class="slider_icon slider_icon_1"></div>Регулярные скидки и акции</div>
+                    <div><div class="slider_icon slider_icon_2"></div>Быстрое оформление</div>
+                    <div><div class="slider_icon slider_icon_3"></div>Все машины застрахованы по КАСКО</div>
+                    <div><div class="slider_icon slider_icon_4"></div>Любая форма оплаты</div>
+                </div>
+            </div>
+            <div class="central_block_right">
+                <img src="/img/banners/mainpagebanner.png">
+            </div>
         </div>
     </div>
     @php } @endphp	
@@ -44,7 +54,12 @@
     <div class="central_block">
 
         <div class="left_block_content">
-            1234344
+            <div class="brands_list_content">
+                <h2>Наш парк авто</h2>
+                <div class="car_brands_list">
+                    Список авто
+                </div>
+            </div>
         </div>
 
         <div class="cars-on-mainpage">
