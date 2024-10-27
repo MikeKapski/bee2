@@ -11,8 +11,11 @@
     --black-background:#000;
     --gray2-background:#DDDDDD;
     --yelow-background:#FFB900;
+    --white-background:#FFF;
 
     --color-black:#000;
+
+    --border-gray:#E0E0E0;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -315,6 +318,127 @@ a {
             padding:40px 135px;
             gap:32px;
         }
+
+        .central_block_slider{
+            display: grid;
+            grid-template-columns: auto 650px;
+            width: 100%;
+            padding:40px 135px;
+            position: relative;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .central_block_left{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .central_block_left h1{
+            font-family: var(--font-family);
+            font-weight:900;
+            font-size: 46px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            padding: 10px;
+        }
+        .central_block_left_text{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size:40px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            padding: 10px;
+        }
+
+        .central_block_left_ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 10px;
+        }
+
+        .central_block_left_ul > div {
+            font-family: var(--font-family);
+            font-weight:400;
+            font-size:20px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            position: relative;
+            padding-left: 60px;
+        }
+        .central_block_left_ul > div > div.slider_icon {
+            position: absolute;
+            width: 47px;
+            height: 47px;
+            background: var(--white-background);
+            left: 0px;
+            border-radius: 50%;
+            top: -12px;
+        }
+        div.slider_icon_1:before {
+            content: "";
+            position: absolute;
+            background: url(/img/icons/banner_1.svg);
+            width:37px;
+            height:37px;
+            background-size: 100% 100%;
+            top:5px;
+            left:5px;
+        }
+        div.slider_icon_2:before {
+            content: "";
+            position: absolute;
+            background: url(/img/icons/banner_2.svg);
+            width:30px;
+            height:30px;
+            background-size: 100% 100%;
+            top:7px;
+            left:9px;
+        }
+        div.slider_icon_3:before {
+            content: "";
+            position: absolute;
+            background: url(/img/icons/banner_3.svg);
+            width:32px;
+            height:29px;
+            background-size: 100% 100%;
+            top:8px;
+            left:8px;
+        }
+        div.slider_icon_4:before {
+            content: "";
+            position: absolute;
+            background: url(/img/icons/banner_4.svg);
+            width:37px;
+            height:37px;
+            background-size: 100% 100%;
+            top:5px;
+            left:5px;
+        }
+
+        /*Cars Brands*/
+        .brands_list_content{
+            position: relative;
+            border: 1px solid var(--border-gray);
+        }
+
+        .brands_list_content > h2{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            padding: 10px 10px 10px 40px;
+            border-bottom: 1px solid var(--border-gray);
+        }
+       
+
 
         /*Cars on mainpage*/
         .cars-on-mainpage-wrapper {
