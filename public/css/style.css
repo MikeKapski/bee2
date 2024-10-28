@@ -12,6 +12,7 @@
     --gray2-background:#DDDDDD;
     --yelow-background:#FFB900;
     --white-background:#FFF;
+    --wine-backround:#551A8B;
 
     --color-black:#000;
 
@@ -319,6 +320,13 @@ a {
             gap:32px;
         }
 
+        .central_block_flex_column_50{
+            display: flex;
+           flex-direction: column;
+            padding:40px 135px;
+            gap:50px;
+        }
+
         .central_block_slider{
             display: grid;
             grid-template-columns: auto 650px;
@@ -421,10 +429,16 @@ a {
             left:5px;
         }
 
-        /*Cars Brands*/
+        /*Cars Brands AND OTHER*/
+        .left_block_content{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
         .brands_list_content{
             position: relative;
             border: 1px solid var(--border-gray);
+            
         }
 
         .brands_list_content > h2{
@@ -434,9 +448,23 @@ a {
             line-height: 124%;
             letter-spacing: -0.01em;
             color: var(--color-black);
-            padding: 10px 10px 10px 40px;
+            padding:20px 10px 20px 30px;
             border-bottom: 1px solid var(--border-gray);
+            position:relative;
         }
+
+        .brands_list_content > h2:before{
+           content: "";
+            position: absolute;
+            background: var(--yelow-background);
+            width: 5px;
+            height: 40px;
+            top: 10px;
+            left: 15px;
+        }
+
+
+
        
 
 
@@ -536,6 +564,147 @@ a {
             padding: 15px;
             cursor: pointer;
         }
+
+
+        /*Text Block Components*/
+        .side_line_block{
+            position: relative;
+            padding-left: 50px;
+            box-sizing: border-box;
+            border-left: 5px solid #e8d716;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height:62px;
+        }
+        .side_line_header{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            
+        }
+        .side_line_text{
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            padding-top: 10px;
+        }
+
+        /*Etapi Arendi Autosov*/
+        .arenda_left_ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 90px;
+            padding: 50px 0px;
+        }
+        .arenda_left_ul > div {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            position: relative;
+            padding-left: 120px;
+        }
+        .slider_icon_yelow{
+            position: absolute;
+            width:82px;
+            height:82px;
+            background: var(--yelow-background);
+            left: 0px;
+            border-radius: 50%;
+            top: -12px;
+        }
+        .arenda_left_ul_heading{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            position: relative;
+        }
+        .arenda_left_ul_text{
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            position: relative;
+        }
+
+        /*About Company*/
+        .about_company_block{
+            display: grid;
+            grid-template-columns: 360px auto;
+            gap: 150px;
+        }
+        .about_text_heading{
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size:32px;
+            line-height:150%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+        }
+        .about_text_wrap{
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size:15px;
+            line-height:150%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            padding: 20px 0px;
+        }
+        .about_text_wrap > p{
+            padding: 10px 0px;
+        }
+        .about_text_buttons{
+            position: relative;
+            width: 100%;
+            padding: 20px 0px;
+        }
+
+    /*Buttons*/
+    .defbuttons_wrap{
+        position: relative;
+    }
+    .defbuttons{
+        padding: 15px 50px 15px 15px;
+        background: var(--wine-backround);
+        color:#FFF;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size:15px;
+        line-height:150%;
+        letter-spacing: -0.01em;
+        position: relative;   
+    }
+    .defbuttons::before{
+        content: "";
+        position: absolute;
+        background: url(/img/icons/arrow.svg);
+        width: 19px;
+        height: 14px;
+        background-size: 100% 100%;
+        top: 18px;
+        right: 9px;
+    }
         
     /*Tech styles*/
     .padd_0_135{padding:0 135px;}
+
+    
+
+
+        /*Flex*/
+            /*Justify*/
+            

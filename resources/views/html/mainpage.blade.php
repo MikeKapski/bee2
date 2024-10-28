@@ -60,6 +60,18 @@
                     Список авто
                 </div>
             </div>
+            <div class="brands_list_content">
+                <h2>Как заказать?</h2>
+                <div class="car_brands_list">
+                    Список авто
+                </div>
+            </div>
+            <div class="brands_list_content">
+                <h2>Стоимость и уловия</h2>
+                <div class="car_brands_list">
+                    Список авто
+                </div>
+            </div>
         </div>
 
         <div class="cars-on-mainpage">
@@ -119,7 +131,70 @@
         </div>
     </div>
 
+
+    <div class="central_block_flex_column_50">
+
+        <div class="how_order_block">
+            <div class="side_line_block">
+                <div class="side_line_header">ЭТАПЫ АРЕНДЫ АВТОМОБИЛЯ</div>
+                <div class="side_line_text">Процесс аренды автомобиля состоит из простых, понятных и прозрачных по своей сути шагов. Никаких сложностей.</div>
+            </div>
+            <div class="arenda_left_ul">
+                <div>
+                    <div class="slider_icon_yelow slider_icon_yelow_1"></div>
+                    <div class="arenda_left_ul_heading">ЗАКАЗ</div>
+                    <div class="arenda_left_ul_text">Вы оставляете заявку на автомобиль удобным для вас способом</div>
+                </div>
+                <div>
+                    <div class="slider_icon_yelow slider_icon_yelow_2"></div>
+                    <div class="arenda_left_ul_heading">УТОЧНЕНИЕ ДЕТАЛЕЙ</div>
+                    <div class="arenda_left_ul_text">Мы с вами связываемся, уточняем все детали и пожелания, запрашиваем необходимые документы</div>
+                </div>
+                <div>
+                    <div class="slider_icon_yelow slider_icon_yelow_3"></div>
+                    <div class="arenda_left_ul_heading">ПРОВЕРКА ДОКУМЕНТОВ</div>
+                    <div class="arenda_left_ul_text">Мы проверяем ваши документы, служба безопасности рассматривает переданные сведения</div>
+                </div>
+                <div>
+                    <div class="slider_icon_yelow slider_icon_yelow_4"></div>
+                    <div class="arenda_left_ul_heading">ПЕРЕДАЧА АВТОМОБИЛЯ</div>
+                    <div class="arenda_left_ul_text">Вы забираете автомобиль согласно вашим пожеланиям</div>
+                </div>
+
+            </div>            
+        </div>
+
+        <div class="rewiews_block">
+            <div class="side_line_block">
+                <div class="side_line_header">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
+            </div>
+
+        </div>
+
+        <div class="about_company_block">
+            <div class="about_image">
+               <img src="/img/maps_contacts.png">
+            </div>
+            <div class="about_text">
+                <div class="about_text_heading">
+                    О КОМПАНИИ<br>АВТОПРОКАТ БИ КАРС
+                </div>
+                <div class="about_text_wrap">
+                    <p>Мы занимаемся прокатом автомобилей в Москве и Московской области с 2018 года. Мы знаем как для Вас важен хороший сервис. Поэтому аренда автомобилей в компании «Би Карс» — это просто и быстро, без лишних вопросов!</p>
+                    <p>В нашем парке можно выбрать автомобиль из более чем 12 ведущих марок автомобилей – это просто и удобно. Мы заботимся о своих клиентах и стараемся предоставить им наилучший сервис и найти подход к каждому клиенту без исключения. Звоните и бронируйте прямо сейчас!</p>
+                </div>
+                <div class="about_text_buttons al_right">
+                    <div class="defbuttons_wrap">
+                        <a href="/o-kompanii" class="defbuttons">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+                        
+
     </div>
+
+    
     
     
  
@@ -135,11 +210,7 @@
     <div class="container">
         <div class="row" style="flex-direction:row;">
             <div class="service-details">
-                <h2>О КОМПАНИИ</h2>
-                <h2><span>АВТОПРОКАТ</span> БИ КАРС</h2>
-                <p>Мы занимаемся прокатом автомобилей в Москве и Московской области уже более 3-х лет. Мы знаем как для Вас важен хороший сервис. Поэтому аренда автомобилей в компании «Би Карс» — это просто и быстро, без лишних вопросов! </p>
-                <p>Прокат машин без залога в «Би Карс» – это просто и удобно. Мы заботимся о своих клиентах и стараемся предоставить им наилучший сервис и найти подход к каждому клиенту без исключения.</p>
-                <a href="/o-kompanii" class="btn-black-white-background">Подробнее</a>
+              
             </div>
             <div id="Lazy_Car_Htop" class="service-image LazyUpload"  data-src="/img/Htop.png" data-car="Htop">
                 
