@@ -7,6 +7,7 @@ use App\Http\Controllers\RoutingController;
 
     /*Frontend Routing*/
     Route::get('/', [RoutingController::class, 'mainpage']);
+    Route::get('/park-avto/{slug}', [RoutingController::class, 'AutoSingle']);
 
 
 
