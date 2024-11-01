@@ -16,6 +16,10 @@
     --wine-backround:#551A8B;
 
     --color-black:#000;
+    --color-white:#FFF;
+    --color-yelow:#FFB900;
+    --color-gray:#696969;
+    --color-gray2:#8D8D8D;
 
     --border-gray:#E0E0E0;
 }
@@ -634,6 +638,18 @@ a {
 
 
         /*Text Block Components*/
+        .promo_car_1{position: relative;}
+        .promo_car_1::after {
+            content: "";
+            position: absolute;
+            background: url(/img/promocars/arenda-kia-soul-promo.png);
+            width: 840px;
+            height: 540px;
+            background-size: cover;
+            top: -60px;
+            right: -350px;
+        }
+
         .side_line_block{
             position: relative;
             padding-left: 50px;
@@ -823,6 +839,8 @@ a {
     }
         .footer_line{
             flex-grow: 1;
+            align-self: center;
+            justify-self: center;
         }
         .footer_header{
             font-family: var(--font-family);
@@ -830,7 +848,7 @@ a {
             font-size: 16px;
             line-height: 124%;
             letter-spacing: -0.01em;
-            color: #FFB900;
+            color: var(--color-yelow);
             padding-bottom: 15px;
         }
         .footer_text{
@@ -839,11 +857,101 @@ a {
             font-size: 12px;
             line-height: 124%;
             letter-spacing: -0.01em;
-            color: #FFF;
+            color: var(--color-white);
+        }
+        .footer_text > a {
+            color: var(--color-white);
+        }
+        .footer_arrow{
+            position: relative;
+            top: -20px;
+            width: 100%;
+        }
+        .footer_arrow:before{
+            content: "";
+            position: absolute;
+            background: url(/img/icons/rectangle_footer.svg);
+            width: 675px;
+            height: 87px;
+            background-size: 100% 100%;
+            top: -40px;
+            left: -200px;
+            z-index: 1;
+        }
+        .footer_arrow:after{
+            content: "";
+            position: absolute;
+            background-color:var(--yelow-background) ;
+            width: 675px;
+            height: 87px;
+            background-size: 100% 100%;
+            top: -40px;
+            right: -200px;
+            z-index: 1;
+        }
+        .footer_arrow a{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size:32px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            padding-bottom: 15px;
+            position: absolute;
+            z-index: 10;
+            top: -18px;
         }
     .footer_bottom{
         background: var(--black-background);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        box-sizing: border-box;
     }
+    .footer_bottom > div{
+        align-self: center;
+        justify-self: center;
+        padding: 5px 0px;
+    }
+        .brand_logo_footer{
+            position: relative;
+        }
+        .brand_logo_footer:before {
+            content: "";
+            position: absolute;
+            background: url(/img/beecars_logo.svg);
+            width:27.85px;
+            height:31px;
+            background-size: 100% 100%;
+            top: 5px;
+            left: -31px;
+        }
+		.brand_logo_company_footer{
+            font-family: var(--font-family);
+            font-weight: 900;
+            font-size:14px;
+            color: var(--color-gray2);
+        }
+		.brand_logo_text_footer{
+            font-family: var(--font-family);
+            font-weight: 300;
+            font-size:10px;
+            color: var(--color-gray2);
+        }
+		.footer_center_text{
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-gray);
+        }
+        .footer_center_text > div{
+            text-align: center;
+        }
+			   
         
     /*Tech styles*/
     .padd_0_135{padding:0 135px;}

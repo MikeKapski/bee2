@@ -169,7 +169,7 @@
 
     <div class="central_block_flex_column_50">
 
-        <div class="how_order_block">
+        <div class="how_order_block promo_car_1">
             <div class="side_line_block">
                 <div class="side_line_header">ЭТАПЫ АРЕНДЫ АВТОМОБИЛЯ</div>
                 <div class="side_line_text">Процесс аренды автомобиля состоит из простых, понятных и прозрачных по своей сути шагов. Никаких сложностей.</div>

@@ -28,6 +28,25 @@ use Cars;
                 //return view('html.mainpage');
 
 			}
+			/*Single Auto*/
+			function AutoSingle($slug){
+
+				//$BreadCrumpsController = new BreadCrumpsController();
+				
+				$PageID = Cars::ReturnPageIDBYSlug($slug);
+				$CarID  = Cars::ReturnCarIDBYSlug($slug);
+				
+				//$BreadCrumps  = $BreadCrumpsController -> ReturnBreadCrumps($PageID);
+				$CarInfo = Cars::ReturnCar($CarID);
+				
+				if($CarInfo['CarType'] == 1){
+				    return view('html.carsingle',['BreadCrumps' => $BreadCrumps, 'CarInfo' => $CarInfo]);
+				}
+				if($CarInfo['CarType'] == 2){
+				    return view('html.carsingle',['BreadCrumps' => $BreadCrumps, 'CarInfo' => $CarInfo]);
+				}
+
+			}
 			/*Park Auto*/
 			/*-function ParkAuto(){
 				
