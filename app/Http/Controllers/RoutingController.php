@@ -30,8 +30,6 @@ use Pages;
 			/*Single Auto*/
 			function AutoSingle($slug){
 
-				//$BreadCrumpsController = new BreadCrumpsController();
-				
 				$PageID = Cars::ReturnPageIDBYSlug($slug);
 				$CarID  = Cars::ReturnCarIDBYSlug($slug);
 				
