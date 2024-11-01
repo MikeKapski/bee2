@@ -52,7 +52,7 @@
 			<!--header -->
 			@include('sections.header')
 			
-			@yield('content')
+				@yield('content')
 			
 			@include('sections.footer')
 			

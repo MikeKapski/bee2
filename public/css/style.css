@@ -797,6 +797,54 @@ a {
             padding: 20px 0px;
         }
 
+    /*Pages*/
+        .htmlpageblock{
+            position: relative;
+        }    
+        /*CarSingle*/
+        .carsingle_screen{
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap:40px;
+            padding: 20px 0px;
+        }
+
+        .carsingle_screen_left{
+            flex-grow: 1;
+        }
+
+        .carsingle_screen_right{
+            width: 380px;
+        }
+
+        .carsingle_h1{
+            font-family: var(--font-family);
+            font-weight:700;
+            font-size:32px;
+            line-height:150%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+        }
+
+        .carsingle_h1 > span{
+            font-weight:900;
+            color: var(--color-yelow);
+        }
+
+        .carsingle_text{
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size:16px;
+            line-height:150%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            padding: 20px 0px;
+        }
+
+        
+
     /*Buttons*/
     .defbuttons_wrap{
         position: relative;
@@ -822,6 +870,7 @@ a {
         top: 18px;
         right: 9px;
     }
+
 
 
 

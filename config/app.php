@@ -136,7 +136,8 @@ return [
     */
 
     'aliases' => [
-        'Cars' => App\Facades\Cars\CarsFacade::class,
+        'Cars'  => App\Facades\Cars\CarsFacade::class,
+        'Pages' => App\Facades\Pages\PagesFacade::class,
     ]
 
 ];
