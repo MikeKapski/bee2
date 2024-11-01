@@ -46,6 +46,63 @@
 			//return "12";
 		}
 
+		/*Возврат Автомобиля по ID*/
+		function ReturnCar($ID){
+			$Arr = array();
+			$RES = CarsModel::where('ID', '=', $ID)->orderBy('ID', 'ASC')->get();
+			foreach($RES as &$row){	
+				$Arr['ID']      = $row->ID;
+				$Arr['Name']    = $row->Name;
+				$Arr['PageUrl'] = $row->PageUrl;
+				$Arr['CarType'] = $row->CarType;
+				$Arr['Price_1'] = $row->Price_1;
+				$Arr['Price_2'] = $row->Price_2;
+				$Arr['Price_3'] = $row->Price_3;
+				$Arr['Price_4'] = $row->Price_4;
+				
+				$Arr['MinDays'] = 1;
+				
+				//$Arr['CarImage']   = self::ReturnCarImage($row->ID,1);
+				$Arr['CarText']    = $row->CarText;
+				$Arr['CarTextShort']    = $row->CarTextShort;
+				
+				//$Arr['CarAdvantage']      = self::ReturnCarAdvantage($row->ID);
+				//$Arr['CarAdvantageSite']  = self::ReturnCarAdvantageSite($row->ID);
+			}
+			return $Arr;
+		}
+
+
+		/*Возврат ID  автомобиля по slug страницы*/
+		function ReturnCarIDBYSlug($slug){
+			$ID = CarsModel::where('Slug', '=', $slug)->value('ID');
+			if(!empty($ID)){
+				return $ID;
+			} else {
+				return false;
+			}
+		}
+		/*Возврат PageID автомобиля по slug страницы*/
+		function ReturnPageIDBYSlug($slug){
+			$ID = CarsModel::where('Slug', '=', $slug)->value('PageID');
+			if(!empty($ID)){
+				return $ID;
+			} else {
+				return false;
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
 		public static function FullTableCarsList(){
 			
 			return CarsModel::with("car_statuses")->where('car_history_id', 1)->get()->toArray();
