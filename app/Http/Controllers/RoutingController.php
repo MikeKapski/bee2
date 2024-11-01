@@ -13,6 +13,7 @@ use PDF;
 use File;
 
 use Cars;
+use Pages;
 
 	class RoutingController extends Controller
 	{
@@ -23,9 +24,7 @@ use Cars;
 			function mainpage(){
 
 				$CarsAll = Cars::ReturnAllCarsListBYType(1);
-				//var_dump($CarsAll);
 				return view('html.mainpage',['CarsAll' => $CarsAll]);
-                //return view('html.mainpage');
 
 			}
 			/*Single Auto*/
@@ -36,9 +35,9 @@ use Cars;
 				$PageID = Cars::ReturnPageIDBYSlug($slug);
 				$CarID  = Cars::ReturnCarIDBYSlug($slug);
 				
-				//$BreadCrumps  = $BreadCrumpsController -> ReturnBreadCrumps($PageID);
-				$CarInfo = Cars::ReturnCar($CarID);
-				
+				$BreadCrumps  = Pages::ReturnBreadCrumps($PageID);
+				$CarInfo      = Cars::ReturnCar($CarID);
+
 				if($CarInfo['CarType'] == 1){
 				    return view('html.carsingle',['BreadCrumps' => $BreadCrumps, 'CarInfo' => $CarInfo]);
 				}
