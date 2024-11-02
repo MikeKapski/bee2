@@ -58,13 +58,12 @@ use Pages;
 			}*/
 			
 			/*Uslovia*/
-			/*function uslovia(){
+			function uslovia(){
 				
-				$BreadCrumpsController = new BreadCrumpsController();
-				$BreadCrumps  = $BreadCrumpsController -> ReturnBreadCrumps(4);
-				
+				$BreadCrumps  = Pages::ReturnBreadCrumps(4);
 				return view('html.uslovia',['BreadCrumps' => $BreadCrumps]);
-			}*/
+				
+			}
 			
 			/*Contacts*/
 			/*function contactspage(){

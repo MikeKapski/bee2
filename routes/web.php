@@ -9,6 +9,8 @@ use App\Http\Controllers\RoutingController;
     Route::get('/', [RoutingController::class, 'mainpage']);
     Route::get('/park-avto/{slug}', [RoutingController::class, 'AutoSingle']);
 
+    Route::get('/uslovia-prokata', [RoutingController::class, 'uslovia']);
+
 
 
 /*Route::get('/uslovia-prokata', 'RoutingController@uslovia');
