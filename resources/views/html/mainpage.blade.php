@@ -55,57 +55,13 @@
 
         <div class="left_block_content">
             <div class="brands_list_content">
-                <h2>Наш парк авто</h2>
-                <div class="car_brands_list">
-                    Список авто
-                </div>
+                @include('components.site.brandlist')
             </div>
             <div class="brands_list_content">
-                <h2>Как заказать?</h2>
-                <div class="how_order_text">
-                    <p>Минимальный возраст — 23 года</p>
-                    <p>Водительский стаж — не менее 3 лет</p>
-                    <p>Наличие постоянной регистрации</p>
-
-                    <p>Для того, чтобы заказать прокат автомобиля позвоните по телефону <a href="tel:+74957903633" alt="Перезвоните мне, прокат автомобилей bee-cars.ru">+7 (495) 790-36-33</a>
-                    или оформите заявку на сайте. Наши менеджеры с радостью ответят на все интересующие вас вопросы</p>
-
-                    <div class="defbuttons_wrap padd_20_0">
-                        <a href="/o-kompanii" class="defbuttons">Подробнее</a>
-                    </div>
-                </div>
+                @include('components.site.howorder')
             </div>
             <div class="brands_list_content">
-                <h2>Стоимость и уловия</h2>
-                <div class="main_uslovia">
-                    <div class="main_uslovia_wrap">
-                        <div class="main_uslovia_image">
-                            <img src="/img/icons/uslovia_1.png"/>
-                        </div>
-                        <div class="main_uslovia_text">
-                            <div class="main_uslovia_text_heading">В пределах МКАД</div>
-                            <div class="main_uslovia_text_price">1500 руб.</div>
-                        </div>
-                    </div>
-                    <div class="main_uslovia_wrap">
-                        <div class="main_uslovia_image">
-                            <img src="/img/icons/uslovia_2.png"/>
-                        </div>
-                        <div class="main_uslovia_text">
-                            <div class="main_uslovia_text_heading">В аэропорт Шереметьево, Домодедово и Внуково</div>
-                            <div class="main_uslovia_text_price">2000 руб.</div>
-                        </div>   
-                    </div>
-                    <div class="main_uslovia_wrap">
-                        <div class="main_uslovia_image">
-                            <img src="/img/icons/uslovia_3.png"/>
-                        </div>
-                        <div class="main_uslovia_text">
-                            <div class="main_uslovia_text_heading">Подача и Возврат</div>
-                            <div class="main_uslovia_text_text">Осуществляется круглосуточно - по предварительной записи</div>
-                        </div>  
-                    </div>
-                </div>
+                @include('components.site.howcost')
             </div>
         </div>
 

@@ -10,6 +10,27 @@
             <div class="Breadrumps">
                 {!! $BreadCrumps !!}
             </div> 
+
+            <div class="three_rows_wrapper">
+                <div class="left_block_content">
+                    <div class="brands_list_content">
+                        @include('components.site.brandlist')
+                    </div>
+                </div>
+                <div class="center_block_content">
+                    2
+                </div>
+
+                <div class="right_block_content">
+                    <div class="brands_list_content">
+                        @include('components.site.howorder')
+                    </div>
+                    <div class="brands_list_content">
+                        @include('components.site.howcost')
+                    </div>
+                </div>
+
+            </div>
             
             <section class="uslovia-page">
                 <div class="row-100">
@@ -17,7 +38,7 @@
                         <h1>Условия проката автомобилей</h2>
                     </div>
                 </div>
-                
+
 			<div class="uslovia-wrapper">
 				<div class="uslovia-row">
 					<div class="uslovia-head">

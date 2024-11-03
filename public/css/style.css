@@ -800,6 +800,8 @@ a {
     /*Pages*/
         .htmlpageblock{
             position: relative;
+            display: flex;
+            flex-direction: column;
         }    
 
         /*Breadcrumps*/
@@ -882,6 +884,21 @@ a {
             color: var(--color-black);
             padding: 20px 0px;
         }
+
+        /*Page 3 Rows*/
+        .three_rows_wrapper{
+            position: relative;
+            display: grid;
+            grid-template-columns: 270px auto 270px;
+            padding: 20px 0px;
+            gap: 32px;
+        }
+        .right_block_content{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
 
         
 
