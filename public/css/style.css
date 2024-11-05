@@ -440,6 +440,9 @@ a {
             flex-direction: column;
             gap: 30px;
         }
+        .center_block_content{
+            position: relative;
+        }
         .brands_list_content{
             position: relative;
             border: 1px solid var(--border-gray);
@@ -900,6 +903,125 @@ a {
         }
 
 
+    /*Heders*/
+        .yeloow_header{
+            position: relative;
+            width:100%;
+            padding-bottom: 35px;
+            z-index: 10;
+            top:0px;
+        }
+        .yeloow_header > h1{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            position: relative;
+            z-index: 10;
+            padding: 10px 30px;
+        }
+        .yeloow_header::before{
+            content: "";
+            position: absolute;
+            background-color: var(--yelow-background);
+            width:calc(100% - 70px);
+            height:62px;
+            background-size: 100% 100%;
+            top:0px;
+            left:0px;
+            z-index: 1;
+        }
+        .yeloow_header::after{
+            content: "";
+            position: absolute;
+            background: url(/img/icons/rectangle_right.svg);
+            width:44px;
+            height:62px;
+            background-size: 100% 100%;
+            top:0px;
+            right: 26px;
+            z-index: 1;
+        }
+        .yeloow_header_h2{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size:26px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            position: relative;
+            width:100%;
+            padding-bottom:20px;
+        }
+        .yeloow_header_h3{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size:20px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            position: relative;
+            width:100%;
+            padding-bottom:20px;
+        }
+        .uslovia-content-row-list {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            font-weight: 300;
+            color: var(--color-black);
+            padding-bottom: 20px;
+        }
+        .uslovia-content-row-list > div {
+            padding-left:30px;
+            font-family: var(--font-family);
+            font-weight:400;
+            font-size:16px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            padding-bottom:5px;
+            position: relative;
+        }
+        .uslovia-content-row-list > div:before {
+            content: "";
+            position: absolute;
+            background-color: var(--black-background);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
+        }
+
+        .ahtung_box{
+            position: relative;
+            width: calc(100% - 70px);
+            padding: 20px 10px;
+            margin-bottom: 30px;
+            background: #F8F8F8;
+            border-radius:10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .ahtung_box > div{
+            font-family: var(--font-family);
+            font-weight:400;
+            font-size:12px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            padding-bottom:5px;
+            position: relative;
+        }
+        .ahtung_box > div > a{
+            color: var(--color-black);
+            text-decoration: underline;
+        }
         
 
     /*Buttons*/
