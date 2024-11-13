@@ -14,7 +14,10 @@
             <div class="three_rows_wrapper">
                 <div class="left_block_content">
                     <div class="brands_list_content">
-                        @include('components.site.brandlist')
+						@include('components.site.brandlist', [
+							'CarsBrands' => $CarsBrands,
+							'CarActions' => 'HrefBox'
+						])
                     </div>
                 </div>
                 <div class="center_block_content">
