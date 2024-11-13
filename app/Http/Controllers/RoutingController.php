@@ -64,7 +64,9 @@ use CarsBrands;
 			function uslovia(){
 				
 				$BreadCrumps  = Pages::ReturnBreadCrumps(4);
-				return view('html.uslovia',['BreadCrumps' => $BreadCrumps]);
+				$CarsBrands = CarsBrands::ReturnAll();
+
+				return view('html.uslovia',['BreadCrumps' => $BreadCrumps, 'CarsBrands' => $CarsBrands]);
 				
 			}
 			
