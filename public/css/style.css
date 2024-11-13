@@ -768,6 +768,31 @@ a {
             position: relative;
         }
 
+        /*Cars Brands List*/
+        .car_brands_list{
+            display: flex;
+            flex-direction: column;
+            padding:20px 10px 20px 15px;
+        }
+        .car_brands_list_item{
+            display: grid;
+            grid-template-columns: 53px auto;
+            gap: 32px;
+            padding: 10px 0px;
+            cursor: pointer;
+        }
+        .car_brands_list_item_name{
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            position: relative;
+            text-transform: uppercase;
+            align-self: center;
+        }
+
         /*About Company*/
         .about_company_block{
             display: grid;

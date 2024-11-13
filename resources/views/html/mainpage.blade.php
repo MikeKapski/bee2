@@ -55,7 +55,12 @@
 
         <div class="left_block_content">
             <div class="brands_list_content">
-                @include('components.site.brandlist')
+                @isset($CarsBrands)
+                    @include('components.site.brandlist', [
+                        'CarsBrands' => $CarsBrands,
+                        'CarActions' => 'SelectBox'
+                    ])
+                @endisset
             </div>
             <div class="brands_list_content">
                 @include('components.site.howorder')

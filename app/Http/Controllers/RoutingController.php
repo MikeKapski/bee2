@@ -14,6 +14,7 @@ use File;
 
 use Cars;
 use Pages;
+use CarsBrands;
 
 	class RoutingController extends Controller
 	{
@@ -23,8 +24,10 @@ use Pages;
 			/*MainPage*/
 			function mainpage(){
 
-				$CarsAll = Cars::ReturnAllCarsListBYType(1);
-				return view('html.mainpage',['CarsAll' => $CarsAll]);
+				$CarsAll   = Cars::ReturnAllCarsListBYType(1);
+				$CarsBrands = CarsBrands::ReturnAll();
+
+				return view('html.mainpage',['CarsAll' => $CarsAll, 'CarsBrands' => $CarsBrands]);
 
 			}
 			/*Single Auto*/
