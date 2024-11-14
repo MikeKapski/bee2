@@ -33,7 +33,8 @@
     29 => 'App\\Providers\\AppServiceProvider',
     30 => 'App\\Providers\\Cars\\CarsServiceProvider',
     31 => 'App\\Providers\\Cars\\CarsBrandsServiceProvider',
-    32 => 'App\\Providers\\Pages\\PagesServiceProvider',
+    32 => 'App\\Providers\\Cars\\CarsPhotosServiceProvider',
+    33 => 'App\\Providers\\Pages\\PagesServiceProvider',
   ),
   'eager' => 
   array (
@@ -54,7 +55,8 @@
     14 => 'App\\Providers\\AppServiceProvider',
     15 => 'App\\Providers\\Cars\\CarsServiceProvider',
     16 => 'App\\Providers\\Cars\\CarsBrandsServiceProvider',
-    17 => 'App\\Providers\\Pages\\PagesServiceProvider',
+    17 => 'App\\Providers\\Cars\\CarsPhotosServiceProvider',
+    18 => 'App\\Providers\\Pages\\PagesServiceProvider',
   ),
   'deferred' => 
   array (

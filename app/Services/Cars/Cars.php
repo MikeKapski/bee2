@@ -3,7 +3,7 @@
 	namespace App\Services\Cars;
 
 	use App\Models\Cars\CarsModel;
-	/*use App\Models\ExpensesModel;
+		/*use App\Models\ExpensesModel;
 	use App\Models\Expences\ExpensesPlanTypeModel;
 	use App\Models\Expences\ExpensesActionsModel;
 	use App\Models\Expences\ExpensesCategoryModel;
@@ -20,6 +20,8 @@
 	use App\Models\Сarwashes\СarwashesUslugiModel;
 		use App\Models\Сarwashes\CarwashesUslugisExpencesCollocationModel;*/
 
+	use CarsPhotos;
+
 	class Cars{
 
 		function ReturnAllCarsListBYType($CarType){
@@ -31,7 +33,7 @@
 				$Arr[$i]['ID']       = $row->ID;
 				$Arr[$i]['Name']     = $row->Name;
 				$Arr[$i]['PageUrl']  = $row->PageUrl;
-				//$Arr[$i]['CarImage'] = self::ReturnCarImage($row->ID,1);
+				$Arr[$i]['CarImage'] = CarsPhotos::ReturnCarImage($row->ID,1);
 				
 				$Arr[$i]['Price_1'] = $row->Price_1;
 				$Arr[$i]['Price_2'] = $row->Price_2;
@@ -91,6 +93,24 @@
 				return false;
 			}
 		}
+
+		/*Возврат главного фото автомобиля*/
+		function ReturnCarImage($CarID,$Category){
+			$whereData = [
+				['CarID', '=', $CarID],
+				['CategoryID', '=', $Category]
+			];
+			$Image = DB::table('ER_PhotosCars')->where($whereData)->value('SitePachImage');
+			if(!empty($Image)){
+				return $Image;
+			} else {
+				return "";
+			}	
+		}
+
+
+
+
 
 
 
