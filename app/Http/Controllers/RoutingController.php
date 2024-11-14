@@ -39,6 +39,8 @@ use CarsBrands;
 				$BreadCrumps  = Pages::ReturnBreadCrumps($PageID);
 				$CarInfo      = Cars::ReturnCar($CarID);
 
+				var_dump($CarInfo);
+
 				if($CarInfo['CarType'] == 1){
 				    return view('html.carsingle',['BreadCrumps' => $BreadCrumps, 'CarInfo' => $CarInfo]);
 				}

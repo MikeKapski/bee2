@@ -78,7 +78,7 @@
                     <div class="main-car-card">
                             <div class="main-car-card-content">
                                 <div class="row-100 FastIMage">
-									<div id="Lazy_Car_{{ $car['ID'] }}" class="LazyUpload" data-car="{{ $car['ID'] }}" data-src="" data-href="{{ $car['PageUrl'] }}">
+									<div id="Lazy_Car_{{ $car['ID'] }}" class="LazyUpload" data-car="{{ $car['ID'] }}" data-src="{{ $car['CarImage'] }}" data-href="{{ $car['PageUrl'] }}">
 										<img src="/img/car_sl.png" >
 									</div>
 								</div>

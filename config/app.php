@@ -138,6 +138,7 @@ return [
     'aliases' => [
         'Cars'        => App\Facades\Cars\CarsFacade::class,
         'CarsBrands'  => App\Facades\Cars\CarsBrandsFacade::class,
+        'CarsPhotos'  => App\Facades\Cars\CarsPhotosFacade::class,
         'Pages'       => App\Facades\Pages\PagesFacade::class,
     ]
 
