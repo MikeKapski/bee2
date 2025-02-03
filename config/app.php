@@ -139,6 +139,7 @@ return [
         'Cars'        => App\Facades\Cars\CarsFacade::class,
         'CarsBrands'  => App\Facades\Cars\CarsBrandsFacade::class,
         'CarsPhotos'  => App\Facades\Cars\CarsPhotosFacade::class,
+        'CarsAdvantages'  => App\Facades\Cars\CarsAdvantagesFacade::class,
         'Pages'       => App\Facades\Pages\PagesFacade::class,
     ]
 

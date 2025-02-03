@@ -881,6 +881,10 @@ a {
             padding: 20px 0px;
         }
 
+        .carsingle_screen_full{
+            width:100%;
+        }
+
         .carsingle_screen_left{
             flex-grow: 1;
         }
@@ -912,6 +916,94 @@ a {
             color: var(--color-black);
             padding: 20px 0px;
         }
+        /*car booking*/
+        .car_booking{
+            display: flex;
+            flex-direction: column;
+            padding: 15px 10px;
+            background: #F2F2F2;
+            border-radius: 5px;
+        }
+        .car_booking_header{
+            font-weight: 700;
+            color: var(--color-black);
+            letter-spacing: -0.01em;
+            font-size: 16px;
+            font-family: var(--font-family);
+        }
+        .car_booking_dates{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+            gap: 20px;
+        }
+        .car_booking_dates_item label{
+            font-weight: 500;
+            color: var(--color-black);
+            letter-spacing: -0.01em;
+            font-size: 14px;
+            font-family: var(--font-family);
+        }
+        .car_booking_name label, .car_booking_phone{
+            font-weight: 500;
+            color: var(--color-black);
+            letter-spacing: -0.01em;
+            font-size: 14px;
+            font-family: var(--font-family);
+        }
+        .InputOnWhiteTextaR{
+            border-radius: 5px;
+            border: 2px solid #E7E7E7;
+            padding: 5px 10px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .car_booking_ur_text{
+            position: relative;
+            width: 100%;
+            padding: 10px 0px;
+            font-weight: 400;
+            color: var(--color-black);
+            letter-spacing: -0.01em;
+            font-size: 12px;
+            font-family: var(--font-family);
+        }
+
+        /*Car Advantages*/
+        .car_advantage{
+
+        }
+        .car_advantage_heading{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 15px 10px;
+            background: #F2F2F2;
+            font-weight: 700;
+            color: var(--color-black);
+            letter-spacing: -0.01em;
+            font-size: 16px;
+            font-family: var(--font-family);
+            border-radius: 5px;
+        }
+        .car_advantage_values{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 15px 10px;
+            font-weight:400;
+            color: var(--color-black);
+            letter-spacing: -0.01em;
+            font-size: 15px;
+            font-family: var(--font-family);
+        }
+        .info-listitem-li{
+            position: relative;
+            width: 100%;
+            padding-bottom: 2px;
+        }
+
+        /*car page left blocks*/
+
 
         /*Page 3 Rows*/
         .three_rows_wrapper{
@@ -1074,6 +1166,23 @@ a {
         top: 18px;
         right: 9px;
     }
+    .YelowOrd{
+        outline: 0;
+        border: 0;
+        padding: 15px 10px;
+        box-sizing: border-box;
+        color: var(--color-black);
+        text-transform: uppercase;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+        font-weight: 700;
+        text-align: center;
+        font-size: 15px;
+        box-sizing: border-box;
+        cursor: pointer;
+        background: var(--yelow-background);
+        border-radius: 10px;
+    }
 
 
 
@@ -1218,4 +1327,41 @@ a {
 
         /*Flex*/
             /*Justify*/
+
+
+    /*Mobile Device*/
+    @media (max-width: 768px) {
+
+        /**Head/*/
+        .head_info{
+            grid-template-columns: 1fr 20px;
+        }
+        .brand_contacts{
+            display: none;
+        }
+        .brands_time{
+            display: none;
+        }
+        .head_menu{
+            display: none;
+        }
+
+        /*Car single page*/
+        .carsingle_screen{
+            flex-direction: column;
+        }
+        .carsingle_screen_left img{width:100%;}
+        .carsingle_screen_right {
+            width: 100%;
+            padding: 20px 10px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .carsingle_h1{
+            font-size: 20px;
+        }
+
+        /*Tech styles*/
+        .padd_0_135{padding:unset;}
+    }
             
