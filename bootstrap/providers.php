@@ -5,5 +5,6 @@ return [
     App\Providers\Cars\CarsServiceProvider::class,
     App\Providers\Cars\CarsBrandsServiceProvider::class,
     App\Providers\Cars\CarsPhotosServiceProvider::class,
+    App\Providers\Cars\CarsAdvantagesServiceProvider::class,
     App\Providers\Pages\PagesServiceProvider::class,
 ];

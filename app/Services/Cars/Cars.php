@@ -21,6 +21,7 @@
 		use App\Models\Сarwashes\CarwashesUslugisExpencesCollocationModel;*/
 
 	use CarsPhotos;
+	use CarsAdvantages;
 
 	class Cars{
 
@@ -64,12 +65,12 @@
 				
 				$Arr['MinDays'] = 1;
 				
-				//$Arr['CarImage']   = self::ReturnCarImage($row->ID,1);
+				$Arr['CarImage']   = CarsPhotos::ReturnCarImage($row->ID,1);
 				$Arr['CarText']    = $row->CarText;
 				$Arr['CarTextShort']    = $row->CarTextShort;
 				
 				//$Arr['CarAdvantage']      = self::ReturnCarAdvantage($row->ID);
-				//$Arr['CarAdvantageSite']  = self::ReturnCarAdvantageSite($row->ID);
+				$Arr['CarAdvantageSite']  = CarsAdvantages::ReturnCarAdvantageSite($row->ID);
 			}
 			return $Arr;
 		}
