@@ -7,7 +7,6 @@
 	<html lang="en">
 	<head>
 		<meta charset="utf-8">
-		
 		<meta name="yandex-verification" content="fbd1dd50fda03d38" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,6 +63,7 @@
 		<script type="text/javascript" id="ymap_lazy" async data-src="https://api-maps.yandex.ru/2.1/?&apikey=dd10c1e6-ca5c-4224-b946-6c3a4a5548a6&lang=ru_RU&load=package.standard"></script>
 		<script defer src="/js/lightslider.min.js"></script>		
 		<script defer src="/js/jquery.jscrollpane.min.js"></script>		
+		<!--<script defer src="https://cdn.jsdelivr.net/npm/moment@2.29.1/locale/ru.js"></script>-->
 		<script type="text/javascript" src="/js/script.js"></script>  
 		
 		<script type="text/javascript" src="https://cloudpbx.beeline.ru/app/cabinet/app/pub/callmenow/mpbx-cmn-frame.js?externalId=6932bb12-76bd-4017-b0db-3c27d849a069-210720628&theme=2&color=3"></script>
