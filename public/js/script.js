@@ -395,7 +395,7 @@ jQuery(document).ready(function($) {
 				if(jQuery("div").is(".LazyUpload")){	
 					$(".LazyUpload").each( function(){
 						let ImageIds  = $(this).attr("data-car");
-						let ImageUrl = $(this).attr("data-src");
+						let ImageUrl  = $(this).attr("data-src");
 						let img = document.createElement('img');
 						img.src = ImageUrl;
 						img.onload = function(that){
@@ -622,14 +622,13 @@ jQuery(document).ready(function($) {
 				}
 			});
 		//};
-		//PhoneContactsMask
-		if(jQuery("input").is("#ContactPhone")){
-			$("#ContactPhone").mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
-			
-			$(document).on(event, '#ContactPhone', function(){
-				$(this).setCursorPosition(3).mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
-			});
-		};
+	//PhoneContactsMask - approve
+	if(jQuery("input").is("#ContactPhone")){
+		$("#ContactPhone").mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
+		$(document).on(event, '#ContactPhone', function(){
+			$(this).setCursorPosition(3).mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
+		});
+	};
 	//Call Me Actions
 		//Footer
 			if(jQuery("input").is("#callme2_phone")){
@@ -832,7 +831,7 @@ jQuery(document).ready(function($) {
 					}
 				}
 			});
-		//Order Car Single
+		//Order Car Single - approve
 			//Phone Masked
 			if(jQuery("input").is("#OrderPhone")){
 				$("#OrderPhone").mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
@@ -841,6 +840,15 @@ jQuery(document).ready(function($) {
 					$(this).setCursorPosition(3).mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
 				});
 			};
+			//DateTimePicker
+			$('#DaysCalendarStart').datepicker({
+				minDate: new Date(),
+				timepicker: true
+			});
+			$('#DaysCalendarFinish').datepicker({
+				minDate: new Date(),
+				timepicker: true,
+			});
 			
 			
 			
@@ -950,11 +958,7 @@ jQuery(document).ready(function($) {
 					$("#AdressPodAuto").slideUp(100);
 				}	
 			});
-			//DateTimePicker
-			$('#DaysCalendar').datepicker({
-				minDate: new Date(),
-				timepicker: true
-			})
+			
 			//Show Options
 			$(document).on(event, '.OrdersOptions', function(){
 				let Options = $(this).attr("data-options");
