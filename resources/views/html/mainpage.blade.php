@@ -30,7 +30,7 @@
                 Посуточная аренда<br> 
                 автомобилей в Москве
                 </div>
-                <div class="central_block_left_ul">
+                <div class="central_block_left_ul hidemobile">
                     <div><div class="slider_icon slider_icon_1"></div>Регулярные скидки и акции</div>
                     <div><div class="slider_icon slider_icon_2"></div>Быстрое оформление</div>
                     <div><div class="slider_icon slider_icon_3"></div>Все машины застрахованы по КАСКО</div>
@@ -62,10 +62,10 @@
                     ])
                 @endisset
             </div>
-            <div class="brands_list_content">
+            <div class="brands_list_content hidemobile">
                 @include('components.site.howorder')
             </div>
-            <div class="brands_list_content">
+            <div class="brands_list_content hidemobile">
                 @include('components.site.howcost')
             </div>
         </div>
@@ -167,7 +167,7 @@
 
         </div>
 
-        <div class="about_company_block">
+        <div class="about_company_block hidemobile">
             <div class="about_image">
                <img src="/img/maps_contacts.png">
             </div>

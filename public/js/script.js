@@ -843,7 +843,7 @@ jQuery(document).ready(function($) {
 			//DateTimePicker
 			$('#DaysCalendarStart').datepicker({
 				minDate: new Date(),
-				timepicker: true
+				timepicker: true,
 			});
 			$('#DaysCalendarFinish').datepicker({
 				minDate: new Date(),

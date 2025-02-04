@@ -286,15 +286,15 @@ a {
             display:none;
             }
             .show-menu-desctop input[type="checkbox"]:checked ~ span:nth-of-type(1){
-            transform-origin:bottom;
-            /*transform:rotatez(45deg) translate(8px,0px);*/
-            width:50%;
-            transform: rotatez(45deg) translate(4px,0px);
+                transform-origin:bottom;
+                /*transform:rotatez(45deg) translate(8px,0px);*/
+                width:50%;
+                transform: rotatez(45deg) translate(4px,0px);
             }
             .show-menu-desctop input[type="checkbox"]:checked ~ span:nth-of-type(2){
             
-            transform-origin:top;
-            transform:rotatez(-45deg)
+                transform-origin:top;
+                transform:rotatez(-45deg)
             }
             
             .show-menu-desctop input[type="checkbox"]:checked ~ span:nth-of-type(3){
@@ -304,6 +304,119 @@ a {
                 /*transform: translate(30px,-11px) rotatez(45deg);*/
                 transform: translate(15px,-5.5px) rotatez(45deg);
             }
+            .show-menu-mobile{
+                position: relative;
+                top: 10px;
+            }
+            .show-menu-mobile input[type="checkbox"]:checked ~ span:nth-of-type(1){
+                transform-origin:bottom;
+                /*transform:rotatez(45deg) translate(8px,0px);*/
+                width:50%;
+                transform: rotatez(45deg) translate(4px,0px);
+            }
+            .show-menu-mobile input[type="checkbox"]:checked ~ span:nth-of-type(2){
+            
+                transform-origin:top;
+                transform:rotatez(-45deg)
+            }
+            
+            .show-menu-mobile input[type="checkbox"]:checked ~ span:nth-of-type(3){
+            
+                transform-origin:bottom;
+                width:50%;
+                /*transform: translate(30px,-11px) rotatez(45deg);*/
+                transform: translate(15px,-5.5px) rotatez(45deg);
+            }
+
+            /*Mobile Nav Menu*/
+		.main-nav{
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			text-align: center;
+			background: #FFF;
+			opacity: 0;
+			z-index: -1;
+			visibility: hidden;
+			transition: all .375s;
+			width: 100%;
+			height: 100%;
+		}
+		.main-nav.is-open {
+			opacity: 1;
+			z-index:90;
+			visibility: visible;
+		}
+		.main-nav::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: -15px;
+			background: #FEDC2A;
+			transform-origin: 0 0;
+			transform: skew(-14deg) translateX(-120%);
+			transition: all .275s .1s;
+		}
+		.main-nav.is-open::before {
+			transform: skew(-14deg) translateX(0);
+		}
+		.main-nav ul {
+			display: inline-flex;
+			flex-direction: column;
+			height: 93%; /* Should be 100%, but we have a notice message :D */
+			align-items: flex-end;
+			justify-content: center;
+			transform: translateX(-18%) skew(-16deg);
+		}
+		.main-nav li {
+			display: block;
+			margin: .5rem 0;
+			text-align: right;
+			transform: skew(16deg);
+		}
+		/* Apparition effect on links */
+		.main-nav a {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		.main-nav.is-open a {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		.main-nav li:nth-child(1) a {
+			transition: all 275ms 175ms
+		}
+		.main-nav li:nth-child(2) a {
+			transition: all 275ms 225ms
+		}
+		.main-nav li:nth-child(3) a {
+			transition: all 275ms 275ms
+		}
+		.main-nav li:nth-child(4) a {
+			transition: all 275ms 325ms
+		}
+		.main-nav li:nth-child(5) a {
+			transition: all 275ms 375ms
+		}
+		/* Decoration */
+		.main-nav ul,
+		.main-nav li {
+			list-style: none;
+			padding: 0;
+		}
+		.main-nav a {
+			display: block;
+			padding: 12px 0;
+			color: #551a8b;
+			font-size: 26px;
+			text-decoration: none;
+			letter-spacing: 1px;
+			font-weight: 300;
+		}
 
     /*MainPageSliders*/
         .index_top_block{
@@ -1332,6 +1445,23 @@ a {
     /*Mobile Device*/
     @media (max-width: 768px) {
 
+        .hidemobile{display:none;}
+
+        .central_block{
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px;
+        }
+
+        /*Cars on mainpage*/
+        .cars-on-mainpage-wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+        .main-car-card-content img{
+            width:100%;
+        }
+
         /**Head/*/
         .head_info{
             grid-template-columns: 1fr 20px;
@@ -1344,6 +1474,43 @@ a {
         }
         .head_menu{
             display: none;
+        }
+        .mobile_header_wrapper {
+            position: relative;
+            width: 100%;
+            padding: 15px 20px;
+            box-sizing: border-box;
+            background: #F5F5F5;
+            position: fixed;
+            top: 0px;
+            z-index: 100;
+        }
+        .head_mobile_row_wrap {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /*Central block*/
+        .central_block_flex_column_50{
+            padding: 20px 20px;
+        }
+        .arenda_left_ul{
+            display: flex;
+            flex-direction: column;
+            padding: 40px 120px 220px 0px;
+        }
+        .promo_car_1::after {
+            content: "";
+            position: absolute;
+            background: url(/img/promocars/arenda-kia-soul-promo.png);
+            width: 740px;
+            height: 540px;
+            background-size: cover;
+            bottom: -100px;
+            right: -350px;
+            top: unset;
         }
 
         /*Car single page*/
@@ -1359,6 +1526,55 @@ a {
         }
         .carsingle_h1{
             font-size: 20px;
+        }
+
+        /*Footer*/
+        .footer_top{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 10px 20px;
+            gap: 30px;
+        }
+        .footer_adress iframe{
+            display: none;
+        }
+        .footer_line{
+            position: relative;
+            width: 100%;
+            right: -90px;
+        }
+        .footer_arrow {
+            position: relative;
+            top: -20px;
+            right: -70px;
+            width: 100%;
+        }
+        .footer_arrow:before {
+            content: "";
+            position: absolute;
+            background: url(/img/icons/rectangle_footer.svg);
+            width: 385px;
+            height: 87px;
+            background-size: 100% 100%;
+            right: -90px;
+            z-index: 1;
+        }
+        .footer_arrow a {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            padding-bottom: 15px;
+            position: absolute;
+            z-index: 10;
+            top: -10px;
+            right: 150px;
+            width: 100%;
+        }
+        .footer_arrow:after {
+            display: none;
         }
 
         /*Tech styles*/
