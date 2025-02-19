@@ -426,6 +426,27 @@ jQuery(document).ready(function($) {
 		windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
 		windowTop > 100 ? $('ul.mainmenu').css('top','100px') : $('ul.mainmenu').css('top','160px');
 	});
+
+	//Tabs Buttons
+	const tabs = document.querySelector(".tabs_mini_wrapper");
+	const btns = document.querySelectorAll(".button");
+	const articles = document.querySelectorAll(".content");
+	tabs.addEventListener("click", function (e) {
+	const id = e.target.dataset.id;
+	if (id) {
+		// remove selected from other buttons
+		btns.forEach(function (btn) {
+		btn.classList.remove("live");
+		});
+		e.target.classList.add("live");
+		// hide other articles
+		articles.forEach(function (article) {
+		article.classList.remove("live");
+		});
+		const element = document.getElementById(id);
+		element.classList.add("live");
+	}
+	});
 	
 	
 	//Show Order Mustang
@@ -972,6 +993,9 @@ jQuery(document).ready(function($) {
 			});
 			//Booking Car
 			$(document).on(event, '.FastOrderSingle', function(){
+
+				alert(12);
+
 				let handler = 0;
 				let DaysCalendar = "";
 				

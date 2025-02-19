@@ -240,8 +240,28 @@ a {
 
         /*Header Actions*/
         .header-actions{
+            position: relative;
             align-self: center;
             justify-self: center;
+            display: flex;
+            gap: 10px;
+            top: -10px;
+        }
+        .whatsapp_call{
+            position: relative;
+            background: url(/img/icons/icon_hatsapp.svg) center no-repeat;
+            width: 40px;
+            height: 40px;
+            background-size: 100% 100%;
+            cursor: pointer;
+        }
+        .telegram_call{
+            position: relative;
+            background: url(/img/icons/icon_telega.svg) center no-repeat;
+            width: 40px;
+            height: 40px;
+            background-size: 100% 100%;
+            cursor: pointer;
         }
 
         /*Show menu button*/
@@ -1036,6 +1056,7 @@ a {
             padding: 15px 10px;
             background: #F2F2F2;
             border-radius: 5px;
+            gap: 10px;
         }
         .car_booking_header{
             font-weight: 700;
@@ -1058,12 +1079,16 @@ a {
             font-size: 14px;
             font-family: var(--font-family);
         }
+        .car_booking_name{
+            position: relative;
+        }
         .car_booking_name label, .car_booking_phone{
             font-weight: 500;
             color: var(--color-black);
             letter-spacing: -0.01em;
             font-size: 14px;
             font-family: var(--font-family);
+            position: relative;
         }
         .InputOnWhiteTextaR{
             border-radius: 5px;
@@ -1072,6 +1097,20 @@ a {
             box-sizing: border-box;
             width: 100%;
         }
+        .InputOnWhiteTextaRError {
+            font-size: 13px;
+            font-family: var(--font-family);
+            font-weight: 400;
+            color: var(--color-black);
+            position: absolute;
+            right: 0px;
+            top: 2px;
+            z-index: 99;
+            opacity: 0;
+        }
+
+
+
         .car_booking_ur_text{
             position: relative;
             width: 100%;
@@ -1132,6 +1171,57 @@ a {
             gap: 30px;
         }
 
+        /*Tabs*/
+        .tabs_mini_wrapper{
+            border: 1px solid #E6E6E6;
+        }
+        .tabs_btn_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .tabs-content {
+            padding:10px 15px;
+        }
+        .content {
+            display: none;
+        }
+        .button{
+            background: #EEEEEE;
+            font-weight:400;
+            color: var(--color-black);
+            letter-spacing: -0.01em;
+            font-size: 15px;
+            font-family: var(--font-family);
+            border:none;
+            padding: 15px 10px;
+        }
+        .button.live {
+            background: #fff;
+        }
+        .content.live {
+            display: block;
+        }
+
+        .car_prices{ 
+            display: flex;
+            flex-direction: column;
+            gap:25px;
+            padding-top: 20px;
+        }
+        .car_day{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap:10px;
+            font-weight:400;
+            color: var(--color-black);
+            letter-spacing: -0.01em;
+            font-size: 14px;
+            font-family: var(--font-family);
+        }
+        .car_day_head{}
+        .car_day_kmlimit{font-size: 12px;}
+        .car_day_price{ font-weight:600;}
 
     /*Heders*/
         .yeloow_header{
