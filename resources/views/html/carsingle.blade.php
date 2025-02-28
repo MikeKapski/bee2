@@ -46,7 +46,8 @@
 
                         </div>
                         <div class="car_booking_detail">
-
+                            <div class="price_total">Итого: <span class="price_col">{{ $CarInfo['Price_1'] }}</span> за <span class="days_col">1</span> сут.</div>
+                            <div class="price_day"><span>{{ $CarInfo['Price_1'] }}</span>  &#8381; в сутки</div>
                         </div>
                         <div class="car_booking_button">
                             <div class="YelowOrd FastOrderSingle" data-pod="2" data-carid="{{ $CarInfo['ID'] }}">Забронировать</div>

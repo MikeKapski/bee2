@@ -373,7 +373,13 @@ jQuery(document).ready(function($) {
 			//CalculateOptions();
 		}
 	}
-	
+
+	//Calculate Prices
+	function CalculatePrice(){
+		alert(DateStartDate);
+		alert("SUKABLYAS");
+	}
+
 	//ipad touch
 	var ua = navigator.userAgent,
 	event = (ua.match(/iPad/i)) ? "touchstart" : "click";
@@ -862,7 +868,13 @@ jQuery(document).ready(function($) {
 				});
 			};
 			//DateTimePicker
+			let DateStartDate;
+			let DateStartEnd;
 			$('#DaysCalendarStart').datepicker({
+				onSelect: function(date) {
+					DateStartDate = date;
+					CalculatePrice();
+				},
 				minDate: new Date(),
 				timepicker: true,
 			});
@@ -870,6 +882,12 @@ jQuery(document).ready(function($) {
 				minDate: new Date(),
 				timepicker: true,
 			});
+
+			
+
+
+			
+
 			
 			
 			
