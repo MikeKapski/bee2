@@ -109,6 +109,12 @@
 			}	
 		}
 
+		/*Возврат Названия Автомобиля*/
+		function ReturnCarName($CarID){
+			$res = CarsModel::where('ID', '=', $CarID)->value("Name");
+			return $res;
+		}
+
 
 
 

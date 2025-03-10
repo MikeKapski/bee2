@@ -1090,6 +1090,23 @@ a {
             font-family: var(--font-family);
             position: relative;
         }
+        .car_booking_detail{
+            color: var(--color-black);
+            letter-spacing: -0.01em;
+            font-family: var(--font-family);
+        }
+        .price_total{
+            font-size: 15px;
+            position: relative;
+            padding-bottom:5px;
+            font-weight: 700;
+        }
+        .price_day{
+            font-size:32px;
+            position: relative;
+            padding-bottom:5px;
+            font-weight: 700;
+        }
         .InputOnWhiteTextaR{
             border-radius: 5px;
             border: 2px solid #E7E7E7;
