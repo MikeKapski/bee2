@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\RoutingController;
+use App\Http\Controllers\AjaxController;
 
 
     /*Frontend Routing*/
@@ -11,7 +12,7 @@ use App\Http\Controllers\RoutingController;
 
     Route::get('/uslovia-prokata', [RoutingController::class, 'uslovia']);
 
-
+    Route::post('/ajaxworker/', [AjaxController::class, 'Ajaxworker']);
 
 /*Route::get('/uslovia-prokata', 'RoutingController@uslovia');
 Route::get('/oplata',   'RoutingController@oplatapage');
