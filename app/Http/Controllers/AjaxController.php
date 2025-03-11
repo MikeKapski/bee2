@@ -216,6 +216,19 @@ use Cars;
 					
 					return 15;
             }
+
+            /*Шаблон быстрого заказа автомобиля*/
+            if($Action == "GetTemplateFastOrder"){
+
+                $CarID                 = $request->input('CarID');
+                $TemplateController    = new TemplateController();
+
+                $Final = $TemplateController -> ReturnFastOrder($CarID);
+
+                return $Final;
+
+            }
+            
             
 
         }

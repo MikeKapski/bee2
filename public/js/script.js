@@ -395,7 +395,7 @@ jQuery(document).ready(function($) {
 
 		$(".price_col").html(CarData.TotalMoney);
 		$(".days_col").html(CarData.Days);
-		$(".price_day").html(CarData.PriceDay);
+		$(".price_day span").html(CarData.PriceDay);
 
 	}
 
@@ -453,25 +453,29 @@ jQuery(document).ready(function($) {
 	});
 
 	//Tabs Buttons
-	const tabs = document.querySelector(".tabs_mini_wrapper");
-	const btns = document.querySelectorAll(".button");
-	const articles = document.querySelectorAll(".content");
-	tabs.addEventListener("click", function (e) {
-	const id = e.target.dataset.id;
-	if (id) {
-		// remove selected from other buttons
-		btns.forEach(function (btn) {
-		btn.classList.remove("live");
-		});
-		e.target.classList.add("live");
-		// hide other articles
-		articles.forEach(function (article) {
-		article.classList.remove("live");
-		});
-		const element = document.getElementById(id);
-		element.classList.add("live");
-	}
-	});
+		//let tabs = 0;
+		const tabs = document.querySelector(".tabs_mini_wrapper");
+		const btns = document.querySelectorAll(".button");
+		const articles = document.querySelectorAll(".content");
+		console.log(tabs);
+		if(tabs !== null){
+			tabs.addEventListener("click", function (e) {
+				const id = e.target.dataset.id;
+				if (id) {
+					// remove selected from other buttons
+					btns.forEach(function (btn) {
+					btn.classList.remove("live");
+					});
+					e.target.classList.add("live");
+					// hide other articles
+					articles.forEach(function (article) {
+					article.classList.remove("live");
+					});
+					const element = document.getElementById(id);
+					element.classList.add("live");
+				}
+			});
+		}
 	
 	
 	//Show Order Mustang
@@ -926,36 +930,8 @@ jQuery(document).ready(function($) {
 					$(".HiddenCommentary").slideUp(100);
 				}	
 			});
-			//Days Minus
-				$(document).on(event, '.day-delete', function(){
-					let Pos = Number($(this).parent("div.days-add-delete").children("div.days-input-wrap").children("input").val());
-					Pos = Pos - 1;
-					if(Pos == 0){ Pos = 1;}
-					$(this).parent("div.days-add-delete").children("div.days-input-wrap").children("input").val(Pos);
-					$(this).parent("div.days-add-delete").children("div.days-input-wrap").children("input").attr("value",Pos);
-					
-					
-					let CarID = $(".FastOrderSingle").attr("data-carid");
-					let CarPrice = ReturnCarPriceBYDays(CSRF_TOKEN,ajaxurl,CarID,Pos);
-					$(".ContactsFormPrice span").html(CarPrice);
-					UpdateOptionsPrices();
-					UpdateTotalSumm();
-				});
-			//Days Add
-				$(document).on(event, '.day-add', function(){
-					let Pos = Number($(this).parent("div.days-add-delete").children("div.days-input-wrap").children("input").val());
-					Pos = Pos + 1;
-					if(Pos == 0){ Pos = 1;}
-					$(this).parent("div.days-add-delete").children("div.days-input-wrap").children("input").val(Pos);
-					$(this).parent("div.days-add-delete").children("div.days-input-wrap").children("input").attr("value",Pos);
-					
-					let CarID = $(".FastOrderSingle").attr("data-carid");
-					let CarPrice = ReturnCarPriceBYDays(CSRF_TOKEN,ajaxurl,CarID,Pos);
-					$(".ContactsFormPrice span").html(CarPrice);
-					UpdateOptionsPrices();
-					UpdateTotalSumm();
-					
-				});
+			
+			
 				//Select Days
 				$(document).on(event, '.StateDays', function(){
 					let Pos  = parseInt($(this).attr("data-days"));
@@ -1065,7 +1041,7 @@ jQuery(document).ready(function($) {
 					result = AjaxPostActionResult(data,ajaxurl);
 					if(result != ""){
 						ym(49189252,'reachGoal','send_order');
-						//$(".FastOrderSingle").remove(result);
+						$(this).removeClass("FastOrderSingle").addClass("ApplicationYes").html("Заявка отправлена");
 						console.log(data);
 					}
 				}
@@ -1074,7 +1050,18 @@ jQuery(document).ready(function($) {
 			});	
 			//Fast Desctop
 			$(document).on(event, '.FastDesctop', function(){
-				document.location.href = $(this).attr("data-href");
+				let CarID = $(this).attr("data-carid");
+				let data = { 
+					_token: CSRF_TOKEN, 
+					action:'GetTemplateFastOrder',
+					CarID:CarID,
+				};	
+				result = AjaxPostActionResult(data,ajaxurl);
+				if(result != ""){
+					$(this).parent("div").parent("div.main-car-card-content").addClass("mc_hide").parent("div.main-car-card").append(result);
+
+				}
+				//document.location.href = $(this).attr("data-href");
 			});	
 			//Click Image
 			$(document).on(event, '.FastIMage div', function(){
@@ -1249,12 +1236,6 @@ jQuery(document).ready(function($) {
 				//$("body").css("position","fixed");
 			});
 			//Order Car Mobile
-			
-			//Fast Desctop
-			$(document).on(event, '.FastDesctop', function(){
-				document.location.href = $(this).attr("data-href");
-			});
-			
 			
 			//email header-mobile
 			$(document).on(event, '.email-header', function(){
