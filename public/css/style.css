@@ -691,6 +691,13 @@ a {
             box-shadow: 0 4px 10px -5px rgb(0 0 0 / 20%);
             box-sizing: border-box;
         }
+        .main-car-card-content img{
+            width:100%;
+        }
+       
+        .mc_hide{
+            display: none;
+        }
         .main-car-card-content h2{
             font-family: var(--font-family);
             font-weight: 700;
@@ -1403,6 +1410,10 @@ a {
         background: var(--yelow-background);
         border-radius: 10px;
     }
+    .ApplicationYes{
+        background: #FFF;
+        color: #03af7d;
+    }
 
 
 
@@ -1565,11 +1576,10 @@ a {
             display: flex;
             flex-direction: column;
         }
-        .main-car-card-content img{
-            width:100%;
-        }
+        
+        
 
-        /**Head/*/
+        /*Head*/
         .head_info{
             grid-template-columns: 1fr 20px;
         }

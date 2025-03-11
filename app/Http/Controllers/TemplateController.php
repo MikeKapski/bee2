@@ -14,8 +14,21 @@ use PDF;
 use File;
 
 	class TemplateController extends Controller
+    
 	{
-	    
+        /*Быстрый заказ автомобиля*/
+        function ReturnFastOrder($CarID){
+
+            return view('components.ajaxtemplates.fastcarorder');
+            
+        }
+
+
+
+
+
+        /*Шаблоны старого сайта*/
+
 	    //Get Mustang Form
 	    function GetMustang(){
 	        
@@ -1512,41 +1525,6 @@ use File;
 			}
 		}	
 		
-		
-		
-			
-			
-		
-		
-		
-		
 
-			
-			
-		//Search functions
-		public function DocsLiteSearch($SV){
-			foreach($SV as &$row){
-				$ARR[] = $row['id'];
-			}
-			$DocsIDS = DB::table('TZ_Docs_Worlds_Collocation')->whereIn('TagID', $ARR)->get()->toArray();
-			//var_dump($DocsIDS);
-			if(!empty($DocsIDS)){
-				$SearchResult = self::ReturnDocsListBYID($DocsIDS);
-				return view('docs.TP.docs_list_searchlite', ['DocName' => $SearchResult]);
-			} else {
-				return view('docs.TP.docs_list_searchempty');
-			}
-		}	
-		public function DocsTextSearch($WRD){
-			//$DocsIDS = DB::select('SELECT ID AS DocID, DocCreate, DocUpdate, DocName, DocBodyID FROM `TZ_Docs` WHERE ID IN (SELECT DocID FROM `TZ_DocsBody` WHERE DocBody LIKE "%:DocText%")', ['DocText' => $WRD]);
-			$DocsIDS = DB::select('SELECT DocID FROM `TZ_DocsBody` WHERE DocBody LIKE "%'.$WRD.'%"');
-			var_dump($DocsIDS);
-			if(!empty($DocsIDS)){
-				$SearchResult = self::ReturnDocsListBYID($DocsIDS);
-				return view('docs.TP.docs_list_searchlite', ['DocName' => $SearchResult]);
-			} else {
-				return view('docs.TP.docs_list_searchempty');
-			}	
-			
-		}
+		
 	}

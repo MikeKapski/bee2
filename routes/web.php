@@ -11,6 +11,9 @@ use App\Http\Controllers\AjaxController;
     Route::get('/park-avto/{slug}', [RoutingController::class, 'AutoSingle']);
 
     Route::get('/uslovia-prokata', [RoutingController::class, 'uslovia']);
+    Route::get('/o-kompanii',      [RoutingController::class, 'about']);
+    Route::get('/contacts',        [RoutingController::class, 'contacts']);
+
 
     Route::post('/ajaxworker/', [AjaxController::class, 'Ajaxworker']);
 
