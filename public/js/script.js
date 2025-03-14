@@ -1049,20 +1049,78 @@ jQuery(document).ready(function($) {
 				
 			});	
 			//Fast Desctop
-			$(document).on(event, '.FastDesctop', function(){
-				let CarID = $(this).attr("data-carid");
-				let data = { 
-					_token: CSRF_TOKEN, 
-					action:'GetTemplateFastOrder',
-					CarID:CarID,
-				};	
-				result = AjaxPostActionResult(data,ajaxurl);
-				if(result != ""){
-					$(this).parent("div").parent("div.main-car-card-content").addClass("mc_hide").parent("div.main-car-card").append(result);
+				//Show
+				$(document).on(event, '.FastDesctop', function(){
+					let CarID = $(this).attr("data-carid");
+					let data = { 
+						_token: CSRF_TOKEN, 
+						action:'GetTemplateFastOrder',
+						CarID:CarID,
+					};	
+					result = AjaxPostActionResult(data,ajaxurl);
+					if(result != ""){
+						$(this).parent("div").parent("div.main-car-card-content").addClass("mc_hide").parent("div.main-car-card").append(result);
+						//Phone 
+						$(".OrderPhoneFast").each(function() {
+							$(this).mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
+						});
+						$(document).on(event, '.OrderPhoneFast', function(){
+							$(this).setCursorPosition(3).mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
+						});
+					}
+					//document.location.href = $(this).attr("data-href");
+				});	
+				//Order
+				//Booking Car
+				$(document).on(event, '.FastOrder', function(){
 
-				}
-				//document.location.href = $(this).attr("data-href");
+					let CarID = $(this).attr("data-carid");
+
+					let OrderNameWrap   = $(this).parent("div.car_booking_button").parent("div.fast_car_booking");
+					let OrderNameBlock  = OrderNameWrap.children("div.car_booking_name").children("input.OrderNameFast");
+					let OrderPhoneBlock = OrderNameWrap.children("div.car_booking_phone").children("input.OrderPhoneFast");
+				
+					let handler = 0;		
+					let OrderName  = OrderNameBlock.val();
+					let OrderPhone = OrderPhoneBlock.val();
+				
+					let OrderNameError = KDChek("noempty",OrderName);
+					if(OrderNameError == 1){
+						handler = 1;
+						OrderNameBlock.parent("div").children("div.InputOnWhiteTextaRError").animate({opacity: 1}, 1000);
+					}
+				
+				    let OrderPhoneError = KDChek("noempty",OrderPhone);
+					if(OrderPhoneError == 1){
+						handler = 1;
+						OrderPhoneBlock.parent("div").children("div.InputOnWhiteTextaRError").animate({opacity: 1}, 1000);
+					}
+				
+				
+					if(handler == 0){
+						let data = { 
+							_token: CSRF_TOKEN, 
+							action:'OrderCarFast',
+							OrderName:OrderName,
+							OrderPhone:OrderPhone,
+							DateStartDate:DateStartDate,
+							DateStartEnd:DateStartEnd,
+							CarID:CarID,
+						};	
+						result = AjaxPostActionResult(data,ajaxurl);
+						if(result != ""){
+							ym(49189252,'reachGoal','send_order'); //поменять на событие быстрого заказа
+							$(this).removeClass("OrderPhoneFast").addClass("ApplicationYes").html("Заявка отправлена");
+							console.log(data);
+						}
+					}
+				
+				
 			});	
+
+				
+
+
 			//Click Image
 			$(document).on(event, '.FastIMage div', function(){
 				document.location.href = $(this).attr("data-href");

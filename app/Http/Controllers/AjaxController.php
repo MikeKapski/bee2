@@ -228,6 +228,71 @@ use Cars;
                 return $Final;
 
             }
+
+			/*Быстрый заказ автомобиля*/
+
+			if($Action == "OrderCarFast"){
+
+                $CarID          = $request->input('CarID');
+                $OrderName      = $request->input('OrderName');
+                $OrderPhone     = $request->input('OrderPhone');
+
+                $UserStatus = 1;
+
+                //Загрузка контроллеров
+                $UserController        = new UserController();
+				$OrderController       = new OrderController();
+				//$CarsController        = new CarsController();
+				$EmailController       = new EmailController();
+				$TelegramBotController = new TelegramBotController();
+				$TemplateController    = new TemplateController();
+
+                //Phone Check
+					$PhoneChek = $UserController -> ChexUserPhoneExist($OrderPhone);
+					if($PhoneChek  === false){
+						$PhoneID = $UserController -> AddNewPhoneToBase($OrderPhone);
+					}else{
+						$PhoneStatus = $UserController -> ChekPhoneStatus($PhoneChek);
+						if($PhoneStatus == 1){
+							$PhoneID = $PhoneChek;
+						}
+						if($PhoneStatus == 2){
+							$UserStatus = 2;
+						}
+					}
+					
+				//Add New Order
+				if($UserStatus == 1){
+					//UserActions
+					$UserIDPhone = $UserController -> ReturnUserIDByPhone($PhoneID); //В приоритете телефон а не почта
+						if($UserIDPhone  == 0){
+                            $UserID = $UserController -> AddNewUser($OrderName,$PhoneID,0);
+						}else{
+							$UserID = $UserIDPhone;
+						}		
+						
+					//Add OrdersID
+					$OrderID = $OrderController -> AddNewOrderStart(1,$UserID);
+
+					$res = $OrderController -> UpdateOrderDays($OrderID,0);
+					$res = $OrderController -> UpdateOrderPhoneID($OrderID,$PhoneID);
+					$res = $OrderController -> UpdateOrderCarID($OrderID,$CarID);
+					$res = $OrderController -> UpdateOrderPriceFull($OrderID,0);
+							
+					//Return Carname
+					$CarName = 	Cars::ReturnCarName($CarID);
+					//PrepareData
+					$Arr['ClientName']  = $OrderName;
+					$Arr['ClientPhone'] = $OrderPhone;
+					$Arr['CarName']  = $CarName;
+						
+					$Rt = $TelegramBotController -> SendChatNewOrderFast($Arr);
+						
+				}
+					
+				//$Final = $TemplateController -> ReturnOrderFormSucces();
+				return 15;
+            }
             
             
 

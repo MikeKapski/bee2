@@ -19,7 +19,7 @@ use File;
         /*Быстрый заказ автомобиля*/
         function ReturnFastOrder($CarID){
 
-            return view('components.ajaxtemplates.fastcarorder');
+            return view('components.ajaxtemplates.fastcarorder', ["CarID" => $CarID]);
             
         }
 
