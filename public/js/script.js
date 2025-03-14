@@ -1258,41 +1258,6 @@ jQuery(document).ready(function($) {
 				$('.Mobile_Slide_Content').html("");
 				$(".Mobile_Slide_Content").jScrollPane().data().jsp.destroy();
 			});
-			//Show Mobile From list Button
-			$(document).on(event, '.FastMobile', function(){
-				let CarID     = $(this).attr("data-carid");
-				let DaysCount = $("#CarDays_"+CarID+" ul li.active-car-card").html();
-				let data = { 
-						_token: CSRF_TOKEN, 
-						action:'FastMobileCarForm',
-						CarID:CarID,
-						DaysCount:DaysCount,
-					};	
-				result = AjaxPostActionResult(data,ajaxurl);
-				
-				let vh = window.innerHeight * 0.01;
-				document.documentElement.style.setProperty('--vh', `${vh}px`);
-						
-						
-						
-				let imgMapH = document.getElementById('WMap').offsetHeight;
-				//$('.Mobile_Slide_Content').css('height', imgMapH-150);
-				$('.Mobile_Slide_Content').css("margin-top","50px").css('height', imgMapH-70);
-				let api = $('.Mobile_Slide_Content').html(result).jScrollPane().data('jsp');
-				
-				
-				$("#OrderPhone").mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
-				
-				$(document).on(event, '#OrderPhone', function(){
-					$(this).setCursorPosition(3).mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
-				});
-				
-	
-				api.reinitialise();
-				$(".MFH_Head").html("Р—Р°РєР°Р· Р°РІС‚РѕРјРѕР±РёР»СЏ");
-				$(".Mobile_Slide_Pop").addClass("Mobile_Slide_Pop-Open");
-				//$("body").css("position","fixed");
-			});
 			//Order Car Mobile
 			
 			//email header-mobile
