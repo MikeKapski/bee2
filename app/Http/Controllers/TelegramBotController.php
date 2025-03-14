@@ -107,6 +107,33 @@ use File;
 			}
 			
 		}
+
+
+		function SendChatNewOrderFast($Arr){
+			
+			$arr = array(
+				'Тип сообщения:'   => "TEST TEST TEST Новый заказ в 1 клик с сайта. ",
+				'Имя Клиента:'     => $Arr['ClientName'],
+				'Телефон:'         => $Arr['ClientPhone'],
+				'Автомобиль:'      => $Arr['CarName'],
+			);
+			$txt = "";
+			foreach($arr as $key => $value) {
+				if(!empty($value)){
+					$txt .= "<b>".$key."</b> ".$value."%0A";
+				}
+			}
+			
+			
+			$sendToTelegram = fopen("https://api.telegram.org/bot".$this->TelegramApi."/sendMessage?chat_id=".$this->ChatID."&parse_mode=html&text=".$txt."","r");
+			
+			if ($sendToTelegram) {
+				return 'Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.';
+			}else {
+				return  'Что-то пошло не так. Попробуйте отправить форму ещё раз.';
+			}
+			
+		}
 		
 		
 		

@@ -12,6 +12,7 @@
             </div> 
 
             <div class="three_rows_wrapper">
+				@php if (!$Detect->isMobile() && !$Detect->isTablet()) { @endphp
                 <div class="left_block_content">
                     <div class="brands_list_content">
 						@include('components.site.brandlist', [
@@ -20,6 +21,7 @@
 						])
                     </div>
                 </div>
+				@php } @endphp
                 <div class="center_block_content">
 					<div class="yeloow_header">
 						<h1>Условия проката автомобилей</h1>
