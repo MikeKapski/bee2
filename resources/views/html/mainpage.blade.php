@@ -15,7 +15,7 @@
     @php } @endphp
     @php 
     if ($Detect->isMobile() || $Detect->isTablet()) { 
-        $OrderAction = "FastMobile";
+        $OrderAction = "FastDesctop";
         @endphp
     <div class="mobilepage">	
     @php } @endphp
