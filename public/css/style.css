@@ -1722,10 +1722,17 @@ a {
         .padd_0_135{padding:unset;}
     }
 
-    @media( max-width:479px) { 
+    @media(max-width:479px) { 
         .footer_arrow a {
-            font-size: 18px;
-            line-height: 154%;
+            font-size: 16px;
+            line-height: 160%;
+        }
+        .footer_bottom{
+            padding: 5px 20px;
+        }
+
+        .padd_20_135 {
+            padding:unset;
         }
     }
 
