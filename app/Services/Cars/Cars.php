@@ -3,6 +3,7 @@
 	namespace App\Services\Cars;
 
 	use App\Models\Cars\CarsModel;
+	use App\Models\Cars\CarsTypesCollocationModel;
 		/*use App\Models\ExpensesModel;
 	use App\Models\Expences\ExpensesPlanTypeModel;
 	use App\Models\Expences\ExpensesActionsModel;
@@ -95,8 +96,70 @@
 			}
 		}
 
+		/*Список автомобилей по бренду*/
+		function ReturnBrandCars($BrandID){
+
+			$i=0;
+			$Arr = array();
+			$RES = CarsModel::where('CarBrandID', '=', $BrandID)->orderBy('Orders', 'ASC')->get();
+			foreach($RES as &$row){	
+				$Arr[$i]['ID']       = $row->ID;
+				$Arr[$i]['Name']     = $row->Name;
+				$Arr[$i]['PageUrl']  = $row->PageUrl;
+				$Arr[$i]['CarImage'] = CarsPhotos::ReturnCarImage($row->ID,1);
+				
+				$Arr[$i]['Price_1'] = $row->Price_1;
+				$Arr[$i]['Price_2'] = $row->Price_2;
+				$Arr[$i]['Price_3'] = $row->Price_3;
+				$Arr[$i]['Price_4'] = $row->Price_4;
+				
+				//$Arr[$i]['CarText'] = $row->CarText;
+				
+				$i++;
+			}
+			return $Arr;
+
+		}
+
+		/*Вернуть простой массив автомобилей*/
+		function ReturnCarsArray($BrandCars){
+
+			$Arr = array();
+			foreach($BrandCars as &$row){	
+				$Arr[]  = $row['ID'];
+			}
+
+			return $Arr;
+		}
+
+		/*Возврат похожих авто по массиву*/
+		function ReturnSimilarCarsByArray($CarsArray){
+
+			$i=0;
+			$SimilarCars   = array();
+			$ReadyCarArray = array();
+
+			foreach($CarsArray as &$car){
+
+				$Similar = self::ReturnSimilar($car);
+
+				foreach($Similar as &$sim){
+					
+					if(!in_array($sim['ID'], $ReadyCarArray) AND !in_array($sim['ID'], $CarsArray)) {
+						$ReadyCarArray[] = $sim['ID'];
+						$SimilarCars[$i] = $sim;
+						$i++;
+					}
+					
+				}
+
+			}
+
+			return $SimilarCars;
+		}
+
 		/*Возврат главного фото автомобиля*/
-		function ReturnCarImage($CarID,$Category){
+		/*function ReturnCarImage($CarID,$Category){
 			$whereData = [
 				['CarID', '=', $CarID],
 				['CategoryID', '=', $Category]
@@ -107,13 +170,44 @@
 			} else {
 				return "";
 			}	
-		}
+		}*/
 
 		/*Возврат Названия Автомобиля*/
 		function ReturnCarName($CarID){
 			$res = CarsModel::where('ID', '=', $CarID)->value("Name");
 			return $res;
 		}
+
+		/*Получить похожие автомобили*/
+		function ReturnSimilar($CarID){
+
+			$CarArray = [];
+			$GetCarCategory =  CarsTypesCollocationModel::where('CarID', '=', $CarID)->value('CarType');
+
+			$whereData = [
+				['CarID', '!=', $CarID],
+				['CarType', '=', $GetCarCategory]
+			];
+
+			$Carslist= CarsTypesCollocationModel::where($whereData)->get();
+
+			if(!empty($Carslist)){
+
+				$i = 0;
+				foreach($Carslist as &$row){	
+
+					$CarArray[$i] = self::ReturnCar($row->CarID);
+					$i++;
+
+				}
+
+			}
+
+			return $CarArray;
+		}
+
+
+
 
 
 

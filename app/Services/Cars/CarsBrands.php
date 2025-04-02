@@ -11,4 +11,16 @@
             return $CarsBrands;
         }
 
+        /*Воврат ID марки по ID  страницы*/
+        function ReturnBrandIDByPageID($PageID){
+
+            $ID = CarsBrandsModel::where('BrandPageID', '=', $PageID)->value('ID');
+			if(!empty($ID)){
+				return $ID;
+			} else {
+				return false;
+			}
+
+        }
+
     }

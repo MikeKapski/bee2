@@ -9,6 +9,9 @@ use App\Http\Controllers\AjaxController;
     /*Frontend Routing*/
     Route::get('/', [RoutingController::class, 'mainpage']);
     Route::get('/park-avto/{slug}', [RoutingController::class, 'AutoSingle']);
+    
+    Route::get('/park-brands/',         [RoutingController::class, 'AutoBrand']);
+    Route::get('/park-brands/{slug}',   [RoutingController::class, 'AutoBrandItem']);
 
     Route::get('/uslovia-prokata', [RoutingController::class, 'uslovia']);
     Route::get('/o-kompanii',      [RoutingController::class, 'about']);
