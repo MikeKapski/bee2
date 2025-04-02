@@ -4,6 +4,16 @@
 
 @section('content')
 
+    @php
+    if (!$Detect->isMobile() && !$Detect->isTablet()) { 
+        $OrderAction = "FastDesctop";
+
+     } 
+    if ($Detect->isMobile() || $Detect->isTablet()) { 
+        $OrderAction = "FastDesctop";
+    } 
+    @endphp
+
     <div class="defaultpage padd_0_135">
         <div class="htmlpageblock padd_0_135">
 
@@ -174,6 +184,44 @@
             <div class="carsingle_screen">
                 <div class="carsingle_screen_full">
                     <h2 class="yeloow_header_h2">Похожие предложения</h2>
+                    <div class="similar_wrap">
+                    @isset($CarInfo['Similar'])
+                        @foreach ($CarInfo['Similar'] as $car)
+                        <div class="main-car-card">
+                                <div class="main-car-card-content">
+                                    <div class="row-100 FastIMage">
+                                        <div id="Lazy_Car_{{ $car['ID'] }}" class="LazyUpload" data-car="{{ $car['ID'] }}" data-src="{{ $car['CarImage'] }}" data-href="{{ $car['PageUrl'] }}">
+                                            <img src="/img/car_sl.png" >
+                                        </div>
+                                    </div>
+
+                                    <div class="row-100">
+                                        <h2><a href="{{ $car['PageUrl'] }}">{{ $car['Name'] }}</a></h2>
+                                    </div>
+                                    <div id="CarDays_{{ $car['ID'] }}" class="main-cars-days" data-carid="{{ $car['ID'] }}">
+                                        <div class="button-days-cols">Количество дней от:</div>
+                                        <ul>
+                                            <li data-price-value="{{ $car['Price_1'] }}">1</li>
+                                            <li data-price-value="{{ $car['Price_2'] }}">5</li>
+                                            <li data-price-value="{{ $car['Price_3'] }}">10</li>
+                                            <li class="active-car-card" data-price-value="{{ $car['Price_4'] }}">30</li>
+                                        </ul>
+                                    </div>
+                                    <div class="row-100 main-car-card-order-price">
+                                        <div id="CarPrice_{{ $car['ID'] }}" class="button-fast-order-price">
+                                            от <span>{{ $car['Price_4'] }} &#8381;</span> в сутки
+                                        </div>
+                                    </div>
+                                    <div class="row-100 main-car-card-order-but">
+                                        <div class="button-fast-order-but {{ $OrderAction }}" data-carid="{{ $car['ID'] }}" data-href="{{ $car['PageUrl'] }}">
+                                            Заказать в 1 клик
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        @endforeach
+                    @endisset
+                    </div>
                 </div>
             </div>
         

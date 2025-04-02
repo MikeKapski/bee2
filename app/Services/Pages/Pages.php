@@ -20,16 +20,32 @@
 	use App\Models\Сarwashes\СarwashesUslugiModel;
 		use App\Models\Сarwashes\CarwashesUslugisExpencesCollocationModel;*/
 
+	use CarsBrands;
+
 	class Pages{
 
-
+		/*Хлебные крошки переменные*/
         public $Site_URL = "https://bee-cars.ru/";
 
 		public $DocsBreadCrumps = array();
 		public $DocsPagesID = array();
 
-        /*Хлебные крошки*/
-         
+		/*Функции работы с страницами*/
+			/*Возврат URL страницы по ее ID*/
+			function ReturnPageURLByID($PageID){
+				$Url  = PagesModel::where([['ID', '=', ''.$PageID.'']])->value('URL');
+				return $Url;
+			}
+			/*Возврат Page ID по ее URL*/
+			function ReturnPageIDBYURL($Url){
+				$Url  = PagesModel::where([['URL', '=', ''.$Url.'']])->value('ID');
+				return $Url;
+			}
+			
+			
+
+        /*Хлебные крошки функции*/
+
         function ReturnBreadCrumps($PageID){
             
             self::DocsBreadCrumpsClean();

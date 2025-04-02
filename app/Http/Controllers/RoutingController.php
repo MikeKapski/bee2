@@ -24,10 +24,72 @@ use CarsBrands;
 			/*MainPage*/
 			function mainpage(){
 
-				$CarsAll   = Cars::ReturnAllCarsListBYType(1);
+				$CarsAll    = Cars::ReturnAllCarsListBYType(1);
 				$CarsBrands = CarsBrands::ReturnAll();
 
 				return view('html.mainpage',['CarsAll' => $CarsAll, 'CarsBrands' => $CarsBrands]);
+
+			}
+			/*Contact Pages*/
+			function contacts(Request $request){
+          
+				$url  = $request->url();
+				$path = parse_url($url, PHP_URL_PATH);
+
+				$PageID       = Pages::ReturnPageIDBYURL($path);
+				$BreadCrumps  = Pages::ReturnBreadCrumps($PageID);
+				$CarsBrands   = CarsBrands::ReturnAll();
+
+				return view('html.contacts', ['BreadCrumps' => $BreadCrumps, 'CarsBrands' => $CarsBrands]);
+				
+			}
+			/*About page*/
+			function about(Request $request){
+
+				$url  = $request->url();
+				$path = parse_url($url, PHP_URL_PATH);
+
+				$PageID       = Pages::ReturnPageIDBYURL($path);
+				$BreadCrumps  = Pages::ReturnBreadCrumps($PageID);
+				$CarsBrands   = CarsBrands::ReturnAll();
+
+
+				return view('html.about', ['BreadCrumps' => $BreadCrumps, 'CarsBrands' => $CarsBrands]);
+				
+			}
+
+			/*Brand page list*/
+			function AutoBrand(Request $request){
+
+				$url  = $request->url();
+				$path = parse_url($url, PHP_URL_PATH);
+
+				$PageID       = Pages::ReturnPageIDBYURL($path);
+				$BreadCrumps  = Pages::ReturnBreadCrumps($PageID);
+				$CarsBrands   = CarsBrands::ReturnAll();
+
+				$CarsAll      = Cars::ReturnAllCarsListBYType(1);
+
+
+				return view('html.brands', ['BreadCrumps' => $BreadCrumps, 'CarsBrands' => $CarsBrands, 'CarsAll' => $CarsAll]);
+
+			}
+			/*Brand page item*/
+			function AutoBrandItem(Request $request){
+
+				$url  = $request->url();
+				$path = parse_url($url, PHP_URL_PATH);
+
+				$PageID      = Pages::ReturnPageIDBYURL($path);
+				$BrandID     = CarsBrands::ReturnBrandIDByPageID($PageID);
+				$BreadCrumps = Pages::ReturnBreadCrumps($PageID);
+
+				$CarsBrands  = CarsBrands::ReturnAll();
+				$BrandCars   = Cars::ReturnBrandCars($BrandID);
+				$CarsIDArray = Cars::ReturnCarsArray($BrandCars);
+				$SimilarCars = Cars::ReturnSimilarCarsByArray($CarsIDArray);
+
+				return view('html.branditem', ['BreadCrumps' => $BreadCrumps, 'CarsBrands' => $CarsBrands, 'BrandCars' => $BrandCars, 'SimilarCars'=> $SimilarCars]);
 
 			}
 			/*Single Auto*/
@@ -36,8 +98,9 @@ use CarsBrands;
 				$PageID = Cars::ReturnPageIDBYSlug($slug);
 				$CarID  = Cars::ReturnCarIDBYSlug($slug);
 				
-				$BreadCrumps  = Pages::ReturnBreadCrumps($PageID);
-				$CarInfo      = Cars::ReturnCar($CarID);
+				$BreadCrumps        = Pages::ReturnBreadCrumps($PageID);
+				$CarInfo            = Cars::ReturnCar($CarID);
+				$CarInfo['Similar'] = Cars::ReturnSimilar($CarID);
 
 				if($CarInfo['CarType'] == 1){
 				    return view('html.carsingle',['BreadCrumps' => $BreadCrumps, 'CarInfo' => $CarInfo]);

@@ -1,4 +1,4 @@
-<h2>Стоимость и уловия</h2>
+<h2>Стоимость и уcловия</h2>
                 <div class="main_uslovia">
                     <div class="main_uslovia_wrap">
                         <div class="main_uslovia_image">

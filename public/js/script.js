@@ -476,6 +476,43 @@ jQuery(document).ready(function($) {
 				}
 			});
 		}
+
+	//Filter brands
+	if(jQuery("div").is(".car_brands_list_item")){
+		$(document).on(event, '.car_brands_list_item', function(){
+			let BrandPageID = $(this).attr("data-BrandPageID");
+			if(Sturl == "/"){
+				data = { 
+					_token: CSRF_TOKEN, 
+					action:'FilterByBrand',
+					BrandPageID:BrandPageID
+				};
+				result = AjaxPostActionResult(data,ajaxurl);
+				console.log(data);
+			} else {
+				data = { 
+					_token: CSRF_TOKEN, 
+					action:'RedirectByBrand',
+					BrandPageID:BrandPageID
+				};
+				result = AjaxPostActionResult(data,ajaxurl);
+				if(result != ""){
+					let AjaxAnswer = JSON.parse(result);
+					if(AjaxAnswer.ErrStatus == 0){
+						document.location.href = AjaxAnswer.PageURL;
+					}
+					
+					
+				}
+			}
+			
+			
+		});
+
+	};
+
+
+	
 	
 	
 	//Show Order Mustang

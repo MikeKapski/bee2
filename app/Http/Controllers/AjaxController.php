@@ -14,12 +14,30 @@ use App\Http\Controllers\Controller;
 use PDF;
 use File;
 use Cars;
+use Pages;
 
 	class AjaxController extends Controller
 	{
 
         public function Ajaxworker(Request $request){
 			$Action = $request->input('action');
+
+			//Возврат ссылки на автомобиль при боковом фильтре
+			if($Action == "RedirectByBrand"){
+
+				$BrandPageID  = (int) $request->input('BrandPageID');
+				$Page = Pages::ReturnPageURLByID($BrandPageID);
+
+				if(!empty($Page)){
+					$ARR['ErrStatus']  = 0;
+					$ARR['ErrText']    = "";
+					$ARR['PageURL']    = $Page;
+				}
+
+				$Ajax = json_encode($ARR);
+				return $Ajax;
+
+			}
             
             //Подсчет стоимости авто
             if($Action == "CalculatePriceCar"){

@@ -109,19 +109,6 @@
                     </div>
                     @endforeach
                 @endisset
-                <?  
-                    if(!empty($CarsAll)){
-                        var_dump($CarsAll);
-                        
-                ?>
-                
-                       
-                
-                
-                <?  
-                        }
-                    
-                ?>
             </div>
             <!--<div class="promo-cargo-show-all"><a href="">Посмотреть все автомобили</a></div>-->
         </div>
