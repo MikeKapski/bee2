@@ -1267,14 +1267,14 @@ a {
         .car_day_price{ font-weight:600;}
 
     /*Heders*/
-        .yeloow_header{
+        .yeloow_header,.black_header{
             position: relative;
             width:100%;
             padding-bottom: 35px;
             z-index: 10;
             top:0px;
         }
-        .yeloow_header > h1{
+        .yeloow_header > h1,.black_header > h1{
             font-family: var(--font-family);
             font-weight: 700;
             font-size: 32px;
@@ -1433,6 +1433,71 @@ a {
         background: #FFF;
         color: #03af7d;
     }
+
+    /*AboutPage*/
+    .about_contacts{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+    .about_contacts_text{
+        display: flex;
+        flex-direction:column;
+        gap:20px;
+    }
+    .about_contacts_text, .about_contacts_text_item{
+        font-family: var(--font-family);
+        font-weight:400;
+        font-size:12px;
+        line-height: 124%;
+        letter-spacing: -0.01em;
+        color: var(--color-black);
+        padding-bottom:5px;
+        position: relative;
+    }
+    .about_contacts_text > h3{
+        font-weight:700;
+        font-size:18px;
+    }
+    .about_contacts_text_item a{
+        color: var(--color-black);
+    }
+
+    .carbuttons{
+        padding: 15px 15px 15px 70px;
+        background: var(--wine-backround);
+        color:#FFF;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size:15px;
+        line-height:150%;
+        letter-spacing: -0.01em;
+        position: relative;  
+        margin-left: 30px; 
+    }
+    .carbuttons::before{
+        content: "";
+        position: absolute;
+        background: url(/img/icons/carside.svg);
+        width: 48px;
+        height: 35px;
+        background-size: 100% 100%;
+        top: 7px;
+        left: 9px;
+    }
+    .carbuttons::after{
+        content: "";
+        position: absolute;
+        background: url(/img/icons/regtangle_left.png);
+        width: 28px;
+        height: 49px;
+        background-size: 100% 100%;
+        top: 0px;
+        left: -25px;
+    }
+
+
+    
 
 
 

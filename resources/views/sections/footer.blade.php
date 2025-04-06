@@ -22,7 +22,7 @@
             </div>
             <div class="footer_time">
                 <div class="footer_header">Время работы офиса</div>
-                <div class="footer_text padd_b_20">Ежедневно с 10:00 до 23:00</div>
+                <div class="footer_text padd_b_20">Ежедневно с 10:00 до 22:00</div>
                 <div class="footer_header">Техническая поддержка</div>
                 <div class="footer_text">Круглосуточно</div>
             </div>

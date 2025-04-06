@@ -24,6 +24,9 @@
 				@php } @endphp
                 <div class="center_block_content">
 					
+                    <div class="black_header">
+						<h1>Контакты</h1>
+					</div>       
 
 						
                 </div>
