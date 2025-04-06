@@ -15,7 +15,7 @@
 				<a href="tel:+74957903633" alt="Перезвоните мне, прокат автомобилей bee-cars.ru">+7 (495) 790-36-33</a>
 			</div>
             <div class="phone-adress">
-                Москва Нежинская дом 5
+                Москва Нежинская дом 5 стр. 1 
 			</div>
         </div>
         <div class="brands_time">
