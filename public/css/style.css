@@ -1274,6 +1274,7 @@ a {
             z-index: 10;
             top:0px;
         }
+        .black_header{padding-bottom:5px;padding:0px;}
         .yeloow_header > h1,.black_header > h1{
             font-family: var(--font-family);
             font-weight: 700;
@@ -1284,6 +1285,30 @@ a {
             position: relative;
             z-index: 10;
             padding: 10px 30px;
+        }
+        .black_header > h1{ padding: 10px;}
+        .black_header > h2{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size:26px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            position: relative;
+            z-index: 10;
+            padding: 10px;
+        }
+
+        .black_text{
+            font-family: var(--font-family);
+            font-weight:400;
+            font-size:20px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            position: relative;
+            z-index: 10;
+            padding:10px;
         }
         .yeloow_header::before{
             content: "";
@@ -1496,6 +1521,13 @@ a {
         left: -25px;
     }
 
+    /*Contacts Page*/
+    .contacts_page{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+
 
     
 
@@ -1634,6 +1666,7 @@ a {
     .padd_0_135{padding:0 135px;}
     .padd_20_135{padding:20px 135px;}
     .padd_20_0{padding:20px 0px;}
+    .padd_20_10{padding:20px 10px;}
 
     .padd_b_20{padding-bottom: 20px;}
 
