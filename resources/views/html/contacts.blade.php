@@ -41,7 +41,21 @@
                                 метро Славянский Бульвар<br>
                                 метро Минская
                             </div>
-                        </div>    
+                            <div class="mess_block phone_icon">
+                                <a href="tel:+74957903633" alt="Прокат автомобилей bee-cars.ru">+7 (495) 790-36-33</a>
+                                <div class="phone_block">Единый многоканальный:</div>
+                            </div>
+                            <div class="mess_block whatsapp_icon">
+                                <a href="https://wa.me/74957903633">WhatsApp</a>
+                            </div>
+                            <div class="mess_block telegram_icon">
+                                <a href="https://wa.me/74957903633">Telegram</a>
+                            </div>
+                            <div class="mess_block email_call">
+                                <a href="mailto:info@bee-cars.ru">info@bee-cars.ru</a>
+                            </div>
+                        </div>  
+                          
                     </div>
 
                     <div class="black_header">
