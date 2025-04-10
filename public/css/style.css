@@ -1865,6 +1865,13 @@ a {
             flex-direction: column;
         }
 
+        /*Contacts*/
+        .black_header > h1{
+            padding: 10px 20px;
+        }
+        .contacts_page{
+            padding: 10px 20px;
+        }
         /*Footer*/
         .footer_top{
             display: grid;
