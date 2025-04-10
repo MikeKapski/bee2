@@ -1762,6 +1762,20 @@ a {
         /*Flex*/
             /*Justify*/
 
+    @media (max-width: 1920px) {
+        .yeloow_header > h1, .black_header > h1{
+            font-size: 26px;
+            line-height: 180%;
+        }
+        .footer_top{
+            padding: 20px 20px!important;
+        }
+        .footer_arrow:after{
+            content: "";
+            width: 0px;
+        }
+    }
+
 
     /*Mobile Device*/
     @media (max-width: 768px) {
