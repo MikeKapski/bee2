@@ -29,7 +29,7 @@
 					</div>       
 
                     <div class="contacts_page">
-                        <div class="contacts_page_image">
+                        <div class="contacts_page_image hidemobile">
                             <img src="/img/maps_contatc2.png">
                         </div>
                         <div class="contacts_page_text">
