@@ -49,7 +49,7 @@
                                 <a href="https://wa.me/74957903633">WhatsApp</a>
                             </div>
                             <div class="mess_block telegram_icon">
-                                <a href="https://wa.me/74957903633">Telegram</a>
+                                <a href="https://t.me/beecars1">Telegram</a>
                             </div>
                             <div class="mess_block email_call">
                                 <a href="mailto:info@bee-cars.ru">info@bee-cars.ru</a>
