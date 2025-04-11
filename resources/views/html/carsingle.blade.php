@@ -8,7 +8,7 @@
     if (!$Detect->isMobile() && !$Detect->isTablet()) { 
         $OrderAction = "FastDesctop";
 
-     } 
+    } 
     if ($Detect->isMobile() || $Detect->isTablet()) { 
         $OrderAction = "FastDesctop";
     } 
@@ -73,6 +73,7 @@
             <div class="carsingle_screen">
                 <div class="carsingle_screen_left">
                     <h2 class="yeloow_header_h2">Технические характеристики</h2>
+                    @php if (!$Detect->isMobile() && !$Detect->isTablet()) { @endphp
                     <div class="car_advantage">
                         <div class="car_advantage_heading">
                             <div>Комплектация</div>
@@ -131,6 +132,81 @@
                             </div>
                         </div>
                     </div>
+                    @php } @endphp
+
+                    @php if ($Detect->isMobile() || $Detect->isTablet()) { @endphp
+                    <div class="car_advantage">
+                        <div class="car_advantage_heading">
+                            <div>Комплектация</div>
+                        </div>
+                        <div class="car_advantage_values">
+                            <div>
+                                @foreach($CarInfo['CarAdvantageSite'] as $advantage)
+                                    @if($advantage->car_advantage->GroupID == 6)
+                                        <div class="info-listitem-li">
+											{{$advantage->car_advantage->Name}}
+                                            @if(!empty($advantage->AdvantageValue)) 
+												<span>{!! $advantage->AdvantageValue !!}</span>
+											@endif
+										</div>
+                                    @endif
+                                @endforeach
+                            </div>
+                        </div>
+                        <div class="car_advantage_heading">
+                            <div>Размеры</div>
+                        </div>
+                        <div class="car_advantage_values">
+                            <div>
+                                 @foreach($CarInfo['CarAdvantageSite'] as $advantage)
+                                    @if($advantage->car_advantage->GroupID == 5)
+                                        <div class="info-listitem-li">
+											{{$advantage->car_advantage->Name}}
+                                            @if(!empty($advantage->AdvantageValue)) 
+												<span>{!! $advantage->AdvantageValue !!}</span>
+											@endif
+										</div>
+                                    @endif
+                                @endforeach
+                            </div>
+                        </div>
+                        <div class="car_advantage_heading">
+                            <div>Расход топлива</div>
+                        </div>
+                        <div class="car_advantage_values">
+                            <div>
+                                @foreach($CarInfo['CarAdvantageSite'] as $advantage)
+                                    @if($advantage->car_advantage->GroupID == 4)
+                                        <div class="info-listitem-li">
+											{{$advantage->car_advantage->Name}}
+                                            @if(!empty($advantage->AdvantageValue)) 
+												<span>{!! $advantage->AdvantageValue !!}</span>
+											@endif
+										</div>
+                                    @endif
+                                @endforeach
+                            </div>
+                        </div>
+                        <div class="car_advantage_heading">
+                            <div>Двигатель</div>
+                        </div>
+                        <div class="car_advantage_values">
+                            <div>
+                                @foreach($CarInfo['CarAdvantageSite'] as $advantage)
+                                    @if($advantage->car_advantage->GroupID == 1)
+                                        <div class="info-listitem-li">
+											{{$advantage->car_advantage->Name}}
+                                            @if(!empty($advantage->AdvantageValue)) 
+												<span>{!! $advantage->AdvantageValue !!}</span>
+											@endif
+										</div>
+                                    @endif
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                    @php } @endphp
+                
                 </div>
                 <div class="carsingle_screen_right">
                     <div class="tabs_mini_wrapper">
