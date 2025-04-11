@@ -1894,6 +1894,9 @@ a {
         .contacts_page{
             padding: 10px 20px;
         }
+        .about_contacts_text{
+            margin-left:60px;
+        }
         /*Footer*/
         .footer_top{
             display: grid;
