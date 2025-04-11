@@ -1858,7 +1858,7 @@ a {
             gap: 32px;
             flex-direction: column;
         }
-        .yeloow_header > h1{font-size:18px;line-height:250%;}
+        .yeloow_header > h1{font-size:16px;line-height:250%;}
 
         /*Car single page*/
         .carsingle_screen{
@@ -1879,12 +1879,13 @@ a {
             flex-direction: column;
         }
 
-        .yeloow_header_h2{
+        .yeloow_header_h2,.yeloow_header_h3{
             padding: 0px 30px 20px 30px;
         }
         .uslovia-content-row-list{
             padding: 0px 30px 20px 30px;
         }
+        .ahtung_box{width:100%;}
 
         /*Contacts*/
         .black_header > h1{
@@ -1927,7 +1928,7 @@ a {
         .footer_arrow a {
             font-family: var(--font-family);
             font-weight: 700;
-            font-size: 24px;
+            font-size: 20px;
             line-height: 124%;
             letter-spacing: -0.01em;
             color: var(--color-black);
