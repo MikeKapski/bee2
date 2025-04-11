@@ -1887,6 +1887,24 @@ a {
         }
         .ahtung_box{width:100%;}
 
+        .car_advantage_heading{
+            margin: 0px 20px;
+            grid-template-columns: 1fr;
+        }
+        .car_advantage_values{
+            grid-template-columns: 1fr;
+            margin: 0px 20px;
+        }
+        .carsingle_screen_right{
+            padding: 20px 30px;
+        }
+
+        .similar_wrap{
+            display: flex;
+            flex-direction: column;
+            padding: 20px 30px;
+        }
+
         /*Contacts*/
         .black_header > h1{
             padding: 10px 20px;
