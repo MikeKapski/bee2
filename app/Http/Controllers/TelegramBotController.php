@@ -78,7 +78,7 @@ use File;
 			}*/
 			
 			$arr = array(
-				'Тип сообщения:'   => "TEST TEST TEST Новый заказ с сайта. ",
+				'Тип сообщения:'   => "Новый заказ с сайта. ",
 				'Имя Клиента:'     => $Arr['ClientName'],
 				'Телефон:'         => $Arr['ClientPhone'],
 				'Автомобиль:'      => $Arr['CarName'],
@@ -112,7 +112,7 @@ use File;
 		function SendChatNewOrderFast($Arr){
 			
 			$arr = array(
-				'Тип сообщения:'   => "TEST TEST TEST Новый заказ в 1 клик с сайта. ",
+				'Тип сообщения:'   => "Новый заказ в 1 клик с сайта. ",
 				'Имя Клиента:'     => $Arr['ClientName'],
 				'Телефон:'         => $Arr['ClientPhone'],
 				'Автомобиль:'      => $Arr['CarName'],

@@ -1879,6 +1879,13 @@ a {
             flex-direction: column;
         }
 
+        .yeloow_header_h2{
+            padding: 0px 30px 20px 30px;
+        }
+        .uslovia-content-row-list{
+            padding: 0px 30px 20px 30px;
+        }
+
         /*Contacts*/
         .black_header > h1{
             padding: 10px 20px;
