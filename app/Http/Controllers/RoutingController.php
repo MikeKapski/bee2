@@ -83,13 +83,14 @@ use CarsBrands;
 				$PageID      = Pages::ReturnPageIDBYURL($path);
 				$BrandID     = CarsBrands::ReturnBrandIDByPageID($PageID);
 				$BreadCrumps = Pages::ReturnBreadCrumps($PageID);
+				$BrandName   = CarsBrands::ReturnBrandNameByID($BrandID);
 
 				$CarsBrands  = CarsBrands::ReturnAll();
 				$BrandCars   = Cars::ReturnBrandCars($BrandID);
 				$CarsIDArray = Cars::ReturnCarsArray($BrandCars);
 				$SimilarCars = Cars::ReturnSimilarCarsByArray($CarsIDArray);
 
-				return view('html.branditem', ['BreadCrumps' => $BreadCrumps, 'CarsBrands' => $CarsBrands, 'BrandCars' => $BrandCars, 'SimilarCars'=> $SimilarCars]);
+				return view('html.branditem', ['BreadCrumps' => $BreadCrumps, 'CarsBrands' => $CarsBrands, 'BrandCars' => $BrandCars, 'SimilarCars'=> $SimilarCars, 'BrandName' => $BrandName]);
 
 			}
 			/*Single Auto*/

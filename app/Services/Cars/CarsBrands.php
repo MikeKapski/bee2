@@ -23,4 +23,17 @@
 
         }
 
+        /*Возврат марки матомобиля*/
+        function ReturnBrandNameByID($BrandID){
+
+            $BrandName = CarsBrandsModel::where('ID', '=', $BrandID)->value('BrandName');
+            
+			if(!empty($BrandName)){
+				return $BrandName;
+			} else {
+				return false;
+			}
+
+        }
+
     }
