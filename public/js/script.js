@@ -399,6 +399,32 @@ jQuery(document).ready(function($) {
 
 	}
 
+	//Загрузка Изображений Авто
+	function LazyCarImage(){
+		if(jQuery("div").is(".LazyUpload")){	
+			$(".LazyUpload").each( function(){
+				let ImageIds  = $(this).attr("data-car");
+				let ImageUrl  = $(this).attr("data-src");
+				let img = document.createElement('img');
+				img.src = ImageUrl;
+				img.onload = function(that){
+					//img.setAttribute("style","width:100%;height:auto;");
+					var htmlOriginal = $.fn.html;
+					$.fn.html = function(html,callback){
+					var ret = htmlOriginal.apply(this, arguments);
+						if(typeof callback == "function"){
+							callback();
+						}
+						return ret;
+					}
+					$("#Lazy_Car_"+ImageIds+"").html(img,function(){
+						RealWidth = $("#Lazy_Car_"+ImageIds+"").children("img").width();
+					});
+				};
+			});
+		}
+	}
+
 	//ipad touch
 	var ua = navigator.userAgent,
 	event = (ua.match(/iPad/i)) ? "touchstart" : "click";
@@ -414,31 +440,13 @@ jQuery(document).ready(function($) {
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	});
 	let map_loaded = false;
+
+	LazyCarImage();
+
 	//Then All Ready
 			//$(window).on('load', function(){
 				//LazyUploadImages
-				if(jQuery("div").is(".LazyUpload")){	
-					$(".LazyUpload").each( function(){
-						let ImageIds  = $(this).attr("data-car");
-						let ImageUrl  = $(this).attr("data-src");
-						let img = document.createElement('img');
-						img.src = ImageUrl;
-						img.onload = function(that){
-							//img.setAttribute("style","width:100%;height:auto;");
-							var htmlOriginal = $.fn.html;
-							$.fn.html = function(html,callback){
-							var ret = htmlOriginal.apply(this, arguments);
-								if(typeof callback == "function"){
-									callback();
-								}
-								return ret;
-							}
-							$("#Lazy_Car_"+ImageIds+"").html(img,function(){
-								RealWidth = $("#Lazy_Car_"+ImageIds+"").children("img").width();
-							});
-						};
-					});
-				}
+				
 				//YAndex MAPS
 				if (!map_loaded) {
 					map_loaded = start_lazy_map();
@@ -488,7 +496,22 @@ jQuery(document).ready(function($) {
 					BrandPageID:BrandPageID
 				};
 				result = AjaxPostActionResult(data,ajaxurl);
+				if(result != ""){
+					var Obj = JSON.parse(result);
+					var numero = Obj.CarTemplate.length;
+					$(".cars-on-mainpage-wrapper").html("");
+					for(var i = 0; i < numero; i++){
+						$(".cars-on-mainpage-wrapper").append(Obj.CarTemplate[i]);
+
+					}
+					LazyCarImage();
+					console.log(Obj);
+					console.log(numero);
+				}
+
+
 				console.log(data);
+				
 			} else {
 				data = { 
 					_token: CSRF_TOKEN, 
