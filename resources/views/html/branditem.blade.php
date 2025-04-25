@@ -33,38 +33,19 @@
                     <div class="cars-on-mainpage-wrapper">
                         @isset($BrandCars)
                             @foreach ($BrandCars as $car)
-                            <div class="main-car-card">
-                                    <div class="main-car-card-content">
-                                        <div class="row-100 FastIMage">
-                                            <div id="Lazy_Car_{{ $car['ID'] }}" class="LazyUpload" data-car="{{ $car['ID'] }}" data-src="{{ $car['CarImage'] }}" data-href="{{ $car['PageUrl'] }}">
-                                                <img src="/img/car_sl.png" >
-                                            </div>
-                                        </div>
 
-                                        <div class="row-100">
-                                            <h2><a href="{{ $car['PageUrl'] }}">{{ $car['Name'] }}</a></h2>
-                                        </div>
-                                        <div id="CarDays_{{ $car['ID'] }}" class="main-cars-days" data-carid="{{ $car['ID'] }}">
-                                            <div class="button-days-cols">Количество дней от:</div>
-                                            <ul>
-                                                <li data-price-value="{{ $car['Price_1'] }}">1</li>
-                                                <li data-price-value="{{ $car['Price_2'] }}">5</li>
-                                                <li data-price-value="{{ $car['Price_3'] }}">10</li>
-                                                <li class="active-car-card" data-price-value="{{ $car['Price_4'] }}">30</li>
-                                            </ul>
-                                        </div>
-                                        <div class="row-100 main-car-card-order-price">
-                                            <div id="CarPrice_{{ $car['ID'] }}" class="button-fast-order-price">
-                                                от <span>{{ $car['Price_4'] }} &#8381;</span> в сутки
-                                            </div>
-                                        </div>
-                                        <div class="row-100 main-car-card-order-but">
-                                            <div class="button-fast-order-but {{ $OrderAction }}" data-carid="{{ $car['ID'] }}" data-href="{{ $car['PageUrl'] }}">
-                                                Заказать в 1 клик
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
+                            @include('components.site.maincarcard', [
+                                'CarID'       => $car['ID'],
+                                'CarName'     => $car['Name'],
+                                'CarImage'    => $car['CarImage'],
+                                'PageUrl'     => $car['PageUrl'],
+                                'OrderAction' => $OrderAction,
+                                'Price_1'     => $car['Price_1'],
+                                'Price_2'     => $car['Price_2'],
+                                'Price_3'     => $car['Price_3'],
+                                'Price_4'     => $car['Price_4']
+                            ])
+
                             @endforeach
                         @endisset
                     </div>
@@ -78,38 +59,19 @@
                         <div class="similar_wrap">
                         @isset($SimilarCars)
                             @foreach ($SimilarCars as $car)
-                            <div class="main-car-card">
-                                    <div class="main-car-card-content">
-                                        <div class="row-100 FastIMage">
-                                            <div id="Lazy_Car_{{ $car['ID'] }}" class="LazyUpload" data-car="{{ $car['ID'] }}" data-src="{{ $car['CarImage'] }}" data-href="{{ $car['PageUrl'] }}">
-                                                <img src="/img/car_sl.png" >
-                                            </div>
-                                        </div>
 
-                                        <div class="row-100">
-                                            <h2><a href="{{ $car['PageUrl'] }}">{{ $car['Name'] }}</a></h2>
-                                        </div>
-                                        <div id="CarDays_{{ $car['ID'] }}" class="main-cars-days" data-carid="{{ $car['ID'] }}">
-                                            <div class="button-days-cols">Количество дней от:</div>
-                                            <ul>
-                                                <li data-price-value="{{ $car['Price_1'] }}">1</li>
-                                                <li data-price-value="{{ $car['Price_2'] }}">5</li>
-                                                <li data-price-value="{{ $car['Price_3'] }}">10</li>
-                                                <li class="active-car-card" data-price-value="{{ $car['Price_4'] }}">30</li>
-                                            </ul>
-                                        </div>
-                                        <div class="row-100 main-car-card-order-price">
-                                            <div id="CarPrice_{{ $car['ID'] }}" class="button-fast-order-price">
-                                                от <span>{{ $car['Price_4'] }} &#8381;</span> в сутки
-                                            </div>
-                                        </div>
-                                        <div class="row-100 main-car-card-order-but">
-                                            <div class="button-fast-order-but {{ $OrderAction }}" data-carid="{{ $car['ID'] }}" data-href="{{ $car['PageUrl'] }}">
-                                                Заказать в 1 клик
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
+                            @include('components.site.maincarcard', [
+                                'CarID'       => $car['ID'],
+                                'CarName'     => $car['Name'],
+                                'CarImage'    => $car['CarImage'],
+                                'PageUrl'     => $car['PageUrl'],
+                                'OrderAction' => $OrderAction,
+                                'Price_1'     => $car['Price_1'],
+                                'Price_2'     => $car['Price_2'],
+                                'Price_3'     => $car['Price_3'],
+                                'Price_4'     => $car['Price_4']
+                            ])
+
                             @endforeach
                         @endisset
                         </div>

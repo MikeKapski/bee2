@@ -778,6 +778,11 @@ a {
             padding: 15px;
             cursor: pointer;
         }
+        .button-fast-order-but::hover{
+            color: #000;
+            font-weight: 700;
+            background: var(--yelow-background);
+        }
 
 
         /*Text Block Components*/
@@ -931,6 +936,10 @@ a {
             position: relative;
             text-transform: uppercase;
             align-self: center;
+        }
+        .car_brands_list_item::hover .car_brands_list_item_name{
+            color: orange;
+            text-shadow: 0 0 5px orange;
         }
 
         /*About Company*/
