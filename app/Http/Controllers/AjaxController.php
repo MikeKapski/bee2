@@ -15,12 +15,53 @@ use PDF;
 use File;
 use Cars;
 use Pages;
+use CarsBrands;
 
 	class AjaxController extends Controller
 	{
 
         public function Ajaxworker(Request $request){
 			$Action = $request->input('action');
+
+			//Фильтр с главной страницы
+			if($Action == "FilterByBrand"){
+
+				$PageID  = (int) $request->input('BrandPageID');
+				
+				$BrandID     = CarsBrands::ReturnBrandIDByPageID($PageID);
+				$BrandName   = CarsBrands::ReturnBrandNameByID($BrandID);
+
+				$BrandCars   = Cars::ReturnBrandCars($BrandID);
+				
+				if(!empty($BrandCars)){
+					$ARR['ErrStatus']  = 0;
+					$ARR['ErrText']    = "";
+
+					$OrderAction = "FastDesctop";
+					$i = 0;
+
+					foreach($BrandCars as &$car){
+						$View  = view('components.site.maincarcard', [
+							'CarID'       => $car['ID'],
+							'CarName'     => $car['Name'],
+							'CarImage'    => $car['CarImage'],
+							'PageUrl'     => $car['PageUrl'],
+							'OrderAction' => $OrderAction,
+							'Price_1'     => $car['Price_1'],
+							'Price_2'     => $car['Price_2'],
+							'Price_3'     => $car['Price_3'],
+							'Price_4'     => $car['Price_4']
+							])->render();
+						$ARR['CarTemplate'][$i] = $View;
+						$i++;
+					}
+				
+				}
+
+				$Ajax = json_encode($ARR);
+				return $Ajax;
+
+			}
 
 			//Возврат ссылки на автомобиль при боковом фильтре
 			if($Action == "RedirectByBrand"){
