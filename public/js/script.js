@@ -486,12 +486,13 @@ jQuery(document).ready(function($) {
 		}
 
 	//Скрыть меню после клика
-	/*if(jQuery("div").is(".dropdown-menu")){
-		document.querySelector('.dropdown-button').addEventListener('click', function() {
-			const menu = document.querySelector('.dropdown-menu');
-			menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-		});	
-	}*/
+	if(jQuery("button").is(".dropdown-button")){
+		
+		$(document).on(event, '.dropdown-button', function(){
+			$(".dropdown-menu").show();
+		});
+		
+	}
 
 	//Filter brands
 	if(jQuery("div").is(".car_brands_list_item")){
