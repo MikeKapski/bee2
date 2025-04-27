@@ -1,0 +1,66 @@
+    /*Autorization Css*/
+
+    :root {
+        --font-family: "Montserrat", sans-serif;
+        --second-family: "Inter", sans-serif;
+    
+        --gray-background:#f5f5f5;
+        --black-background:#000;
+        --gray2-background:#DDDDDD;
+        --gray3-background:#464646;
+        --yelow-background:#FFB900;
+        --white-background:#FFF;
+        --wine-backround:#551A8B;
+    
+        --color-black:#000;
+        --color-white:#FFF;
+        --color-yelow:#FFB900;
+        --color-gray:#696969;
+        --color-gray2:#8D8D8D;
+    
+        --border-gray:#E0E0E0;
+    }
+    
+    .flex-container-center {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .mainpage_login{
+        position: relative;
+        z-index: 10;
+        background-color: var(--gray-background);
+    }
+
+    .LoginPage{
+        padding: 10px;
+        background: #FFF;
+        border: 1px solid #000;
+        border-radius: 10px;
+    }
+
+    .LoginPage h1{
+        font-family: var(--font-family);
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 124%;
+        letter-spacing: 0.2em;
+        color: var(--color-black);
+        padding: 10px;
+    }
+
+    .LoginPageWrap{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .LoginPageGroup{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }

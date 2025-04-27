@@ -43,7 +43,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family: var(--font-family);;
+	font-family: var(--font-family);
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -1869,6 +1869,93 @@ a {
         }
         /*Breadrumps*/
         .Breadrumps{padding: 5px 20px;}
+
+        .brands_list_content{
+            margin-top: 100px;
+            border: unset;
+        }
+        .mobiletooer h2{
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 124%;
+            letter-spacing: -0.01em;
+            color: var(--color-black);
+            padding: 10px;
+        }
+
+        /*DropDownMenu*/
+        /* Стили для контейнера выпадающего списка */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            /* Стили для кнопки */
+            .dropdown-button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                outline: none;
+                transition: background-color 0.3s ease;
+                background: #551A8B;
+                text-align: center;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 124%;
+                letter-spacing: -0.01em;
+                color: #FFF;
+                padding: 15px;
+                cursor: pointer;
+            }
+
+            .dropdown-button:hover {
+                background: var(--yelow-background);
+            }
+
+            /* Стили для выпадающего меню */
+            .dropdown-menu {
+                display: none; /* По умолчанию скрыто */
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                border-radius: 5px;
+                overflow: hidden;
+                width: 100%;
+                padding: 10px 20px;
+                box-sizing: border-box;
+            }
+
+            /* Стили для элементов списка */
+            .dropdown-menu li {
+                list-style: none;
+            }
+
+            .dropdown-menu li a {
+                display: block;
+                padding: 10px 20px;
+                text-decoration: none;
+                color: #333;
+                transition: background-color 0.3s ease;
+            }
+
+            .dropdown-menu li a:hover {
+                background-color: #ddd;
+            }
+
+            /* Показать меню при наведении на кнопку */
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
 
         /*Central block*/
         .central_block_flex_column_50{

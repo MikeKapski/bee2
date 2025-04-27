@@ -485,6 +485,14 @@ jQuery(document).ready(function($) {
 			});
 		}
 
+	//Скрыть меню после клика
+	/*if(jQuery("div").is(".dropdown-menu")){
+		document.querySelector('.dropdown-button').addEventListener('click', function() {
+			const menu = document.querySelector('.dropdown-menu');
+			menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+		});	
+	}*/
+
 	//Filter brands
 	if(jQuery("div").is(".car_brands_list_item")){
 		$(document).on(event, '.car_brands_list_item', function(){
@@ -502,11 +510,13 @@ jQuery(document).ready(function($) {
 					$(".cars-on-mainpage-wrapper").html("");
 					for(var i = 0; i < numero; i++){
 						$(".cars-on-mainpage-wrapper").append(Obj.CarTemplate[i]);
-
 					}
 					LazyCarImage();
-					console.log(Obj);
-					console.log(numero);
+					if(jQuery("div").is(".dropdown-menu")){
+						$(".dropdown-menu").hide();
+					}
+					/*const menu = document.querySelector('.dropdown-menu');
+					menu.style.display = menu.style.display === 'none';*/
 				}
 
 

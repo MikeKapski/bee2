@@ -55,12 +55,29 @@
 
         <div class="left_block_content">
             <div class="brands_list_content">
-                @isset($CarsBrands)
-                    @include('components.site.brandlist', [
-                        'CarsBrands' => $CarsBrands,
-                        'CarActions' => 'SelectBox'
-                    ])
-                @endisset
+
+                @php if (!$Detect->isMobile() && !$Detect->isTablet()) { @endphp
+
+                    @isset($CarsBrands)
+                        @include('components.site.brandlist', [
+                            'CarsBrands' => $CarsBrands,
+                            'CarActions' => 'SelectBox'
+                        ])
+                    @endisset
+
+                @php } @endphp
+
+                @php if ($Detect->isMobile() || $Detect->isTablet()) { @endphp
+
+                    @isset($CarsBrands)
+                        @include('components.site.brandlistmobile', [
+                            'CarsBrands' => $CarsBrands,
+                            'CarActions' => 'SelectBox'
+                        ])
+                    @endisset
+
+                @php } @endphp
+                
             </div>
             <div class="brands_list_content hidemobile">
                 @include('components.site.howorder')

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\RoutingController;
 use App\Http\Controllers\AjaxController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CmsController;
 
 
     /*Frontend Routing*/
@@ -20,6 +22,14 @@ use App\Http\Controllers\AjaxController;
 
     Route::post('/ajaxworker/', [AjaxController::class, 'Ajaxworker']);
 
+    //Роуты Авторизации
+    Route::get('/login', [UserController::class, 'UserLogin'])->name('login'); 
+    //Poуты Админки
+    Route::prefix('cms')->middleware(['auth'])->group(function () {
+
+        Route::get('/', [CmsController::class, 'CmsMainPage']);
+
+    });
 /*Route::get('/uslovia-prokata', 'RoutingController@uslovia');
 Route::get('/oplata',   'RoutingController@oplatapage');
 Route::get('/o-kompanii', 'RoutingController@okompanii');

@@ -15,6 +15,13 @@ use File;
 
 	class UserController extends Controller
 	{
+
+		//login page routing
+		function UserLogin(){
+
+			return view('html.loginpage');
+
+		}
 		
 		//cheking functions
 			//chek phone exist
