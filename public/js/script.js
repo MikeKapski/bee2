@@ -512,11 +512,11 @@ jQuery(document).ready(function($) {
 						$(".cars-on-mainpage-wrapper").append(Obj.CarTemplate[i]);
 					}
 					LazyCarImage();
-					if(jQuery("div").is(".dropdown-menu")){
+					if(jQuery("ul").is(".dropdown-menu")){
 						$(".dropdown-menu").hide();
 					}
-					/*const menu = document.querySelector('.dropdown-menu');
-					menu.style.display = menu.style.display === 'none';*/
+					/*const menu = document.querySelector('.dropdown-menu');*/
+					//menu.querySelector('.dropdown-menu').style.display = 'none';
 				}
 
 
