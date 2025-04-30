@@ -28,7 +28,7 @@
                 <div class="carsingle_screen_right">
                     <h1 class="carsingle_h1"><span>Аренда</span> {{ $CarInfo['Name'] }}</h1>
                     <div class="carsingle_text">
-                        {{ $CarInfo['CarTextShort'] }}
+                        {!! $CarInfo['CarTextShort'] !!}
                     </div>
                     <div class="car_booking">
                         <div class="car_booking_header">Мой заказ</div>
