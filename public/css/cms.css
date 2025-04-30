@@ -20,6 +20,10 @@
     
         --border-gray:#E0E0E0;
     }
+
+    body {
+        font-family: var(--second-family);
+    }
     
     .flex-container-center {
         padding: 0;
@@ -38,10 +42,12 @@
     }
 
     .LoginPage{
-        padding: 10px;
-        background: #FFF;
-        border: 1px solid #000;
+        width: 450px;
+        padding: 40px;
         border-radius: 10px;
+        box-shadow: 0 0 37px #0815420d;
+        margin: 0 auto;
+        background-color: #fff;
     }
 
     .LoginPage h1{

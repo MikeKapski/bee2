@@ -47,6 +47,32 @@
 
 	</head>
 	<body>
+		<!-- OrderPopUp -->
+		<div class="PopUpWrapper">
+			<div class="PopUpContainer">
+			<div class="fast_car_booking">
+    			<div class="car_booking_header">Заказ Автомобиля</div> 
+						<div class="car_booking_name">
+							<label>Имя</label>
+							<input class="InputOnWhiteTextaR OrderNameFast" id="OrderNameFast" type="text">
+							<div class="InputOnWhiteTextaRError">Необходимо заполнить поле</div>
+						</div>
+                        <div class="car_booking_phone">
+                            <label>Телефон</label>
+                            <input class="InputOnWhiteTextaR OrderPhoneFast" id="OrderPhoneFast" placeholder="+7 (xxx) xxx-xx-xx" type="text">
+                            <div class="InputOnWhiteTextaRError">Необходимо заполнить поле</div>
+                        </div>
+                        <div class="car_booking_button">
+                            <div class="YelowOrd FastOrder" data-carid="1">Забронировать</div>
+                        </div>
+                        <div class="car_booking_ur_text">
+                            Нажимая на кнопку "Забронировать" вы даете согласие на обработку персональных данных.
+                            В соответствии с Политикой Конфиденциальности, а так же с условиями аренды и правилами пользования автомобилями
+                        </div>
+                </div>
+				<div class="PopUpClose"></div>
+			</div>
+		</div>
 		<div id='wrap_all' class="centrall_wrapper">	
 			<!--header -->
 			@include('sections.header')
@@ -66,8 +92,6 @@
 		<!--<script defer src="https://cdn.jsdelivr.net/npm/moment@2.29.1/locale/ru.js"></script>-->
 		<script type="text/javascript" src="/js/script.js"></script>  
 		
-		<script type="text/javascript" src="https://cloudpbx.beeline.ru/app/cabinet/app/pub/callmenow/mpbx-cmn-frame.js?externalId=6932bb12-76bd-4017-b0db-3c27d849a069-210720628&theme=2&color=3"></script>
-
 		@stack('scripts')	
 		
 		<!-- Yandex.Metrika counter -->

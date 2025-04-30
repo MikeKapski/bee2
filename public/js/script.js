@@ -424,6 +424,13 @@ jQuery(document).ready(function($) {
 			});
 		}
 	}
+	//Показать Всплывающее окно заказа Авто
+	function ShowFastPopUp(){
+		$(".PopUpWrapper").css('display','flex');
+	}
+	function HideFastPopUp(){
+		$(".PopUpWrapper").css('display','none');
+	}
 
 	//ipad touch
 	var ua = navigator.userAgent,
@@ -1123,7 +1130,15 @@ jQuery(document).ready(function($) {
 				//Show
 				$(document).on(event, '.FastDesctop', function(){
 					let CarID = $(this).attr("data-carid");
-					let data = { 
+					$(".FastOrder").attr("data-carid",CarID);
+					ShowFastPopUp();
+					$(".OrderPhoneFast").each(function() {
+						$(this).mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
+					});
+					$(document).on(event, '.OrderPhoneFast', function(){
+						$(this).setCursorPosition(3).mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
+					});
+					/*let data = { 
 						_token: CSRF_TOKEN, 
 						action:'GetTemplateFastOrder',
 						CarID:CarID,
@@ -1138,7 +1153,7 @@ jQuery(document).ready(function($) {
 						$(document).on(event, '.OrderPhoneFast', function(){
 							$(this).setCursorPosition(3).mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
 						});
-					}
+					}*/
 					//document.location.href = $(this).attr("data-href");
 				});	
 				//Order
@@ -1188,7 +1203,10 @@ jQuery(document).ready(function($) {
 				
 				
 			});	
-
+			//Close Fast Booking
+			$(document).on(event, '.PopUpClose', function(){
+				HideFastPopUp();
+			});
 				
 
 
