@@ -19,8 +19,8 @@
                     <input type="password" id="StandPwd" name="password" required>
                 </div>
 
-                <div class="LoginPageGroup">
-                    <button id="MakeAuth">Войти</button>
+                <div class="LoginPageGroup mt-3">
+                    <button id="MakeAuth" style="w-100">Войти</button>
                 </div>
             </div>
         </div>
