@@ -19,11 +19,14 @@ use App\Http\Controllers\CmsController;
     Route::get('/o-kompanii',      [RoutingController::class, 'about']);
     Route::get('/contacts',        [RoutingController::class, 'contacts']);
 
+    Route::get('/policy',        [RoutingController::class, 'policy']);
+
 
     Route::post('/ajaxworker/', [AjaxController::class, 'Ajaxworker']);
 
     //Роуты Авторизации
-    Route::get('/login', [UserController::class, 'UserLogin'])->name('login'); 
+    Route::get('/login',  [UserController::class, 'UserLogin'])->name('login'); 
+    Route::post('/login', [CmsController::class,  'UserAuth']);
     //Poуты Админки
     Route::prefix('cms')->middleware(['auth'])->group(function () {
 

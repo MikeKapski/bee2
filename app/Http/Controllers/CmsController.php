@@ -10,6 +10,7 @@ use App\Http\Requests;
 use App\User;
 use App\Http\Controllers\Controller;
 
+use Auth;
 use PDF;
 use File;
 
