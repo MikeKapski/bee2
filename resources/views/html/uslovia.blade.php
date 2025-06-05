@@ -84,7 +84,7 @@
 					<h3 class="yeloow_header_h3">Суточный пробег</h3>
 					<div class="uslovia-content-row-list">
 						<div class="uslovia-price">Лимит суточного пробега - <span>250</span> км.</div>
-						<div class="uslovia-price">Превышение установленного лимита оплачивается Арендатором из расчета <span>6</span> руб/км.</div>
+						<div class="uslovia-price">Превышение установленного лимита оплачивается Арендатором из расчета <span>10</span> руб/км.</div>
 					</div>
 						
 					<h3 class="yeloow_header_h3">Дополнительные водители</h3>
@@ -99,8 +99,8 @@
 						
 					<h3 class="yeloow_header_h3">Дополнительные расходы</h3>
 					<div class="uslovia-content-row-list">
-						<div class="uslovia-price">Топливо оплачивается из расчета <span>65</span> рублей за литр*</div>
-						<div class="uslovia-price">Мойка автомобиля — <span>1600</span> рублей</div>
+						<div class="uslovia-price">Топливо оплачивается из расчета <span>90</span> рублей за литр*</div>
+						<div class="uslovia-price">Мойка автомобиля — <span>от 1600</span> рублей</div>
 						<div class="uslovia-price">Химчистка — <span>2500</span> рублей/ одна деталь салона</div>
 						<div class="uslovia-price">Комиссия за оплату штрафов нашими менеджерами <span>50</span> руб.</div>
 						<div class="uslovia-note">* При отличии уровня топлива в баке в меншую сторону чем при получении автомобиля</div>
@@ -134,6 +134,7 @@
 					<div class="uslovia-content-row-list">
 						<div>Бензин</div>
 						<div>Оплата платных стоянок</div>
+						<div>Оплата платных дорог</div>
 						<div>Оплата штрафов</div>
 					</div>
 						
