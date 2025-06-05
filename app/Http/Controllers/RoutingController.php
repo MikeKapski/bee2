@@ -133,6 +133,17 @@ use CarsBrands;
 				return view('html.uslovia',['BreadCrumps' => $BreadCrumps, 'CarsBrands' => $CarsBrands]);
 				
 			}
+
+			/*Policy*/
+
+			function policy(){
+				
+				$BreadCrumps  = Pages::ReturnBreadCrumps(54);
+				$CarsBrands = CarsBrands::ReturnAll();
+
+				return view('html.policy',['BreadCrumps' => $BreadCrumps, 'CarsBrands' => $CarsBrands]);
+				
+			}
 			
 			/*Contacts*/
 			/*function contactspage(){
