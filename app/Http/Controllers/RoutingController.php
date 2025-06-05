@@ -103,10 +103,14 @@ use CarsBrands;
 				$CarInfo            = Cars::ReturnCar($CarID);
 				$CarInfo['Similar'] = Cars::ReturnSimilar($CarID);
 
+
 				if($CarInfo['CarType'] == 1){
 				    return view('html.carsingle',['BreadCrumps' => $BreadCrumps, 'CarInfo' => $CarInfo]);
 				}
 				if($CarInfo['CarType'] == 2){
+				    return view('html.carsingle',['BreadCrumps' => $BreadCrumps, 'CarInfo' => $CarInfo]);
+				}
+				if($CarInfo['CarType'] == 4){
 				    return view('html.carsingle',['BreadCrumps' => $BreadCrumps, 'CarInfo' => $CarInfo]);
 				}
 
