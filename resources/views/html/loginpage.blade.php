@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="LoginPageGroup mt-3">
-                    <button id="MakeAuth" style="w-100">Войти</button>
+                    <button id="MakeAuth" class="xl-button w-100">Войти</button>
                 </div>
             </div>
         </div>

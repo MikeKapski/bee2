@@ -450,6 +450,14 @@ img {
         border-radius: var(--bs-border-radius);
         font-weight: 300;
     }
+
+    .xl-button {
+
+        padding: 15px 20px;
+        font-weight: 300;
+        font-size: 20px;
+
+    }
     
     .flex-container-center {
         padding: 0;
