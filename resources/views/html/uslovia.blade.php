@@ -84,17 +84,12 @@
 					<h3 class="yeloow_header_h3">Суточный пробег</h3>
 					<div class="uslovia-content-row-list">
 						<div class="uslovia-price">Лимит суточного пробега - <span>250</span> км.</div>
-						<div class="uslovia-price">Превышение установленного лимита оплачивается Арендатором из расчета <span>10</span> руб/км.</div>
+						<div class="uslovia-price">Превышение установленного лимита оплачивается Арендатором из расчета от <span>10</span> руб/км. в зависимости от класса автомобиля</div>
 					</div>
 						
 					<h3 class="yeloow_header_h3">Дополнительные водители</h3>
 					<div class="uslovia-content-row-list">
 							<div class="uslovia-price">Оформляются бесплатно при наличии соответствующих документов</div>
-					</div>
-						
-					<h3 class="yeloow_header_h3">Факт нанесения ущерба</h3>
-					<div class="uslovia-content-row-list">
-						<div class="uslovia-price">Отсутствие справок из уполномоченных органов о факте нанесения ущерба имуществу Арендодателя — полное возмещение ущерба, согласно калькуляции Арендодателя</div>
 					</div>
 						
 					<h3 class="yeloow_header_h3">Дополнительные расходы</h3>
@@ -103,6 +98,9 @@
 						<div class="uslovia-price">Мойка автомобиля — <span>от 1600</span> рублей</div>
 						<div class="uslovia-price">Химчистка — <span>2500</span> рублей/ одна деталь салона</div>
 						<div class="uslovia-price">Комиссия за оплату штрафов нашими менеджерами <span>50</span> руб.</div>
+					</div>
+
+					<div class="ahtung_box">
 						<div class="uslovia-note">* При отличии уровня топлива в баке в меншую сторону чем при получении автомобиля</div>
 					</div>
 

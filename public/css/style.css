@@ -680,7 +680,7 @@ a {
             width: 100%;
             background: #FFF;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             box-sizing: border-box;
             gap: 30px;
         }
