@@ -69,7 +69,7 @@
                                 Ежедневно с 10:00 до 22:00
                             </div>
                             <div class="defbuttons_wrap padd_20_0">
-                                <a href="/uslovia-prokata" class="carbuttons">Как проехать?</a>
+                                <a href="https://yandex.ru/maps/213/moscow/?ll=37.474642%2C55.715997&mode=routes&rtext=~55.716027%2C37.474646&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D210792012207&z=17" class="carbuttons">Как проехать?</a>
                             </div>
                         </div>     
                     </div>
