@@ -693,6 +693,7 @@ a {
         }
         .main-car-card-content img{
             width:100%;
+            cursor: pointer;
         }
        
         .mc_hide{
