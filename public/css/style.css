@@ -1058,6 +1058,12 @@ a {
         .carsingle_screen_left_text p{
             padding-bottom: 15px;
         }
+        .carsingle_screen_left_text h3{
+            font-weight: 700;
+        }
+        .carsingle_screen_left_text h4{
+            font-weight: 700;
+        }
 
         .carsingle_screen_right{
             width: 380px;
