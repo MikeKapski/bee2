@@ -1037,6 +1037,26 @@ a {
 
         .carsingle_screen_left{
             flex-grow: 1;
+            width: 100%;
+        }
+        .carsingle_screen_left_tiWrap{
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr auto;
+        }
+        .carsingle_screen_left_image{
+
+        }
+        .carsingle_screen_left_text{
+            padding: 15px 10px;
+            font-weight: 400;
+            color: var(--color-black);
+            letter-spacing: -0.01em;
+            font-size: 15px;
+            font-family: var(--font-family);
+        }
+        .carsingle_screen_left_text p{
+            padding-bottom: 15px;
         }
 
         .carsingle_screen_right{

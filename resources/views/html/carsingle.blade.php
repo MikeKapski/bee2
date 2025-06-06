@@ -23,7 +23,14 @@
             
             <div class="carsingle_screen">
                 <div class="carsingle_screen_left">
-                    <img src="{{ $CarInfo['CarImage'] }}"/>
+                    <div class="carsingle_screen_left_tiWrap">
+                        <div class="carsingle_screen_left_image">
+                            <img src="{{ $CarInfo['CarImage'] }}"/>
+                        </div>
+                        <div class="carsingle_screen_left_text">
+                            {!! $CarInfo['CarText'] !!}
+                        </div>
+                    </div>
                 </div>
                 <div class="carsingle_screen_right">
                     <h1 class="carsingle_h1"><span>Аренда</span> {{ $CarInfo['Name'] }}</h1>
