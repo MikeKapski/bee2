@@ -1925,6 +1925,11 @@ a {
         .fast_car_booking{
             padding:10px;
         }
+
+        .center_block_content {
+            position: relative;
+            padding: 0px 10px;
+        }
         
         
 
