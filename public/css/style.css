@@ -1896,6 +1896,16 @@ a {
         .cars-on-mainpage-wrapper {
             grid-template-columns: 1fr 1fr 1fr;
         }
+
+        .padd_0_135 {
+            padding:0 40px;
+        }
+        .central_block_slider{
+            padding:40px 40px;
+        }
+        .central_block{
+            padding:40px 40px;
+        }
         
     }
 
