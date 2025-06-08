@@ -101,7 +101,7 @@
 					</div>
 
 					<div class="ahtung_box">
-						<div class="uslovia-note">* При отличии уровня топлива в баке в меншую сторону чем при получении автомобиля</div>
+						<div class="uslovia-note">* При отличии уровня топлива в баке в меньшую сторону чем при получении автомобиля</div>
 					</div>
 
 					<div class="yeloow_header">
