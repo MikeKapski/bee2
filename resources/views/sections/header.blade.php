@@ -113,6 +113,9 @@
 				<li><a href="/o-kompanii/">О компании</a></li>
 				<li><a href="/contacts/">Контакты</a></li>
 			</ul>
+			<div class="call_mobile">
+				<button class="mobile-button"><a href="tel:+74957903633" alt="Автопрокат автомобилей bee-cars.ru">+7 (495) 790-36-33</a></button>
+			</div>
 		</div>
 		
     @php } @endphp	
