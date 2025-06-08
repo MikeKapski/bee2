@@ -114,6 +114,11 @@ use CarsBrands;
 				    return view('html.carsingle',['BreadCrumps' => $BreadCrumps, 'CarInfo' => $CarInfo]);
 				}
 
+				//Fake Car
+				if($CarInfo['CarType'] == 10){
+				    return view('html.carsingle',['BreadCrumps' => $BreadCrumps, 'CarInfo' => $CarInfo]);
+				}
+
 			}
 			/*Park Auto*/
 			/*-function ParkAuto(){
