@@ -1045,8 +1045,8 @@ a {
         }
         .carsingle_screen_left_tiWrap{
             position: relative;
-            display: grid;
-            grid-template-columns: 1fr auto;
+            display:flex;
+            flex-direction: row;
         }
         .carsingle_screen_left_image{
 
@@ -1072,7 +1072,7 @@ a {
         }
 
         .carsingle_screen_right{
-            width: 380px;
+            width: 480px;
         }
 
         .carsingle_h1{
@@ -1880,7 +1880,11 @@ a {
     }
 
     @media (max-width: 1600px) {
-        
+        .carsingle_screen_left_tiWrap{
+            position: relative;
+            display:flex;
+            flex-direction: column;
+        }
     }
 
     @media (max-width: 1440px) {
@@ -1892,7 +1896,9 @@ a {
     }
 
     @media (max-width: 1366px) {
-        
+        .carsingle_screen_right{
+            width: 480px;
+        }
     }
 
     @media (max-width: 1280px) {
@@ -2125,7 +2131,7 @@ a {
             margin: 0px 20px;
         }
         .carsingle_screen_right{
-            padding: 20px 30px;
+            padding: 20px 20px;
         }
 
         .similar_wrap{
