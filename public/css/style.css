@@ -237,6 +237,10 @@ a {
         .mainmenu a{
             color:var(--color-black);
         }
+        .mainmenu a:hover{
+            color: orange;
+            text-shadow: 0 0 5px orange;
+        }
 
         /*Header Actions*/
         .header-actions{
