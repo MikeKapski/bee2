@@ -1097,12 +1097,14 @@ jQuery(document).ready(function($) {
 				if(OrderNameError == 1){
 					handler = 1;
 					$("#OrderName").parent("div").children("div.InputOnWhiteTextaRError").animate({opacity: 1}, 1000);
+					$("#OrderName").addClass("redborder");
 				}
 				
 				let OrderPhoneError = KDChek("noempty",OrderPhone);
 				if(OrderPhoneError == 1){
 					handler = 1;
 					$("#OrderPhone").parent("div").children("div.InputOnWhiteTextaRError").animate({opacity: 1}, 1000);
+					$("#OrderPhone").addClass("redborder");
 				}
 				
 				
@@ -1118,6 +1120,8 @@ jQuery(document).ready(function($) {
 					};	
 					result = AjaxPostActionResult(data,ajaxurl);
 					if(result != ""){
+						$("#OrderName").removeClass("redborder");
+						$("#OrderPhone").removeClass("redborder");
 						ym(49189252,'reachGoal','send_order');
 						$(this).removeClass("FastOrderSingle").addClass("ApplicationYes").html("Заявка отправлена");
 						console.log(data);
@@ -1174,12 +1178,14 @@ jQuery(document).ready(function($) {
 					if(OrderNameError == 1){
 						handler = 1;
 						OrderNameBlock.parent("div").children("div.InputOnWhiteTextaRError").animate({opacity: 1}, 1000);
+						OrderNameBlock.addClass("redborder");
 					}
 				
 				    let OrderPhoneError = KDChek("noempty",OrderPhone);
 					if(OrderPhoneError == 1){
 						handler = 1;
 						OrderPhoneBlock.parent("div").children("div.InputOnWhiteTextaRError").animate({opacity: 1}, 1000);
+						OrderPhoneBlock.addClass("redborder");
 					}
 				
 				
@@ -1195,6 +1201,8 @@ jQuery(document).ready(function($) {
 						};	
 						result = AjaxPostActionResult(data,ajaxurl);
 						if(result != ""){
+							OrderNameBlock.removeClass("redborder");
+							OrderPhoneBlock.removeClass("redborder");
 							ym(49189252,'reachGoal','send_order'); //поменять на событие быстрого заказа
 							$(this).removeClass("OrderPhoneFast").addClass("ApplicationYes").html("Заявка отправлена");
 							console.log(data);
