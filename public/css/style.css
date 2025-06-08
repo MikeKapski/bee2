@@ -1977,6 +1977,7 @@ a {
             letter-spacing: -0.01em;
             color: var(--color-black);
             padding: 10px;
+            text-align: center;
         }
 
         /*DropDownMenu*/
@@ -2007,6 +2008,7 @@ a {
                 color: #FFF;
                 padding: 15px;
                 cursor: pointer;
+                width: 100%;
             }
 
             .dropdown-button:hover {
