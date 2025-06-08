@@ -1849,6 +1849,10 @@ a {
 
     
 
+    /*Borders*/
+    .redborder{
+        border-color: #dd4848;
+    }
 
         /*Flex*/
             /*Justify*/
