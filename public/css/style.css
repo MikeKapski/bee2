@@ -1994,6 +1994,41 @@ a {
             text-align: center;
         }
 
+        .call_mobile{
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            cursor: pointer;
+        }
+        .mobile-button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                outline: none;
+                transition: background-color 0.3s ease;
+                background: #551A8B;
+                text-align: center;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 124%;
+                letter-spacing: -0.01em;
+                color: #FFF;
+                padding: 15px;
+                cursor: pointer;
+                width: 90%;
+            }
+        .mobile-button a{
+            color: #FFF;
+        }
+        .mobile-button a:hover{
+            color: #FEDC2A;
+        }
+
         /*DropDownMenu*/
         /* Стили для контейнера выпадающего списка */
             .dropdown {
