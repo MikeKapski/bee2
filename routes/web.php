@@ -10,6 +10,7 @@ use App\Http\Controllers\CmsController;
 
     /*Frontend Routing*/
     Route::get('/', [RoutingController::class, 'mainpage']);
+    Route::get('/park-avto', [RoutingController::class, 'ParkAuto']);
     Route::get('/park-avto/{slug}', [RoutingController::class, 'AutoSingle']);
     
     Route::get('/park-brands/',         [RoutingController::class, 'AutoBrand']);
