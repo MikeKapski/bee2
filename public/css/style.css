@@ -1850,8 +1850,8 @@ a {
         pointer-events: none;
     }
     .cookie-agreement-stick{
-        background: #551a8b;
-        color: #b5caff;
+        background: #551a8b5c;
+        color: #000000;
         font-family: var(--font-family);
         font-weight: 400;
         font-size: 14px;
