@@ -1845,13 +1845,14 @@ a {
         right: 0;
         bottom: calc(49px + env(safe-area-inset-bottom));
         z-index: var(--z-index-notifications);
-        display: flex;
+        display:none;
         justify-content: flex-end;
         pointer-events: none;
+        z-index: 10;
     }
     .cookie-agreement-stick{
         background: #551a8be6;
-        color: #FFF;
+        color: #b5caff;
         font-family: var(--font-family);
         font-weight: 400;
         font-size: 14px;

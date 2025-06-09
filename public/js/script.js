@@ -374,6 +374,27 @@ jQuery(document).ready(function($) {
 			//CalculateOptions();
 		}
 	}
+	//Установка Куков
+	function setCookie(name,value,days) {
+		var expires = "";
+		if (days) {
+			var date = new Date();
+			date.setTime(date.getTime() + (days*24*60*60*1000));
+			expires = "; expires=" + date.toUTCString();
+		}
+		document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+	}
+	//Чтение
+	function getCookie(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		}
+		return null;
+	}
 
 	//Calculate Prices
 	let DateStartDate = new Date();
@@ -1215,6 +1236,21 @@ jQuery(document).ready(function($) {
 			$(document).on(event, '.PopUpClose', function(){
 				HideFastPopUp();
 			});
+			//Chek Cookie
+			let Cookie = 0;
+			Cookie = getCookie("Cook");
+			console.log(Cookie);
+			if(Cookie === null){
+				$(".cookie-agreement").css("display", "flex");
+			}
+
+			//Accept Cookie
+			$(document).on(event, '#AcceptCookie', function(){
+				setCookie("Cook",1,360);
+				$(".cookie-agreement").hide();
+			});
+
+			
 				
 
 
