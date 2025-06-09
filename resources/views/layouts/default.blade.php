@@ -111,6 +111,27 @@
         </script>
         <noscript><div><img src="https://mc.yandex.ru/watch/49189252" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
+		<script src="https://myreviews.dev/widget/dist/index.js" defer></script>
+		<script>
+			(function (){
+			var myReviewsInit = function () {
+				new window.myReviews.BlockWidget({
+				uuid: "f2682b01-bcde-4fd1-9cd7-9a0c4c83dc8d",
+				name: "g98744146",
+				additionalFrame:"none",
+				lang:"ru",
+				widgetId: "1"
+				}).init();
 
+			};
+			if (document.readyState === "loading") {
+			document.addEventListener('DOMContentLoaded', function () {
+				myReviewsInit()
+			})
+			} else {
+			myReviewsInit()
+			}
+			})()
+		</script>
 	</body>
 </html>
