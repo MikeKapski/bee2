@@ -58,6 +58,23 @@ use CarsBrands;
 				
 			}
 
+
+			function ParkAuto(Request $request){
+
+				$url  = $request->url();
+				$path = parse_url($url, PHP_URL_PATH);
+
+				$PageID       = Pages::ReturnPageIDBYURL($path);
+				$BreadCrumps  = Pages::ReturnBreadCrumps($PageID);
+				$CarsBrands   = CarsBrands::ReturnAll();
+
+				$CarsAll      = Cars::ReturnAllCarsListBYType(1);
+
+
+				return view('html.parkauto', ['BreadCrumps' => $BreadCrumps, 'CarsBrands' => $CarsBrands, 'CarsAll' => $CarsAll]);
+
+			}
+
 			/*Brand page list*/
 			function AutoBrand(Request $request){
 
