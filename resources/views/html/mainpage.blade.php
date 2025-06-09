@@ -169,7 +169,7 @@
                 <div class="side_line_header">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
             </div>
             <div style="display: flex; justify-content: center;margin-top: 20px;border-radius: 20px;">
-                <iframe style="width: 100%; height: 100%; max-width: 1170px; border: none; outline: none; padding: 0; margin: 0" id="myReviews__block-widget">
+                <iframe style="width: 100%; height: 100%; max-width: 2300px; border: none; outline: none; padding: 0; margin: 0" id="myReviews__block-widget">
                 </iframe>
             </div>
         </div>
