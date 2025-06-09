@@ -45,4 +45,11 @@
 				<div>© <?php echo date('Y'); ?> Bee-cars.ru</div>
 			</div>
         </div>
+
+        <div class="cookie-agreement">
+            <div class="cookie-agreement-stick">
+                <div> Продолжая просмотр, вы даете согласие на обработку файлов <a class="sm-link_white" target="_self" href="/policy"> cookies </a></div>
+                <div class="button-round button-mini">Принять</div>
+            </div>
+        </div>
     </footer>
