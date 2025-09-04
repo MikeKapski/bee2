@@ -52,4 +52,6 @@
                 <div class="button-round button-mini" id="AcceptCookie">Принять</div>
             </div>
         </div>
+
+        
     </footer>
