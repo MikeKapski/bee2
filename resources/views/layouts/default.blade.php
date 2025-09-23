@@ -50,8 +50,8 @@
 		<!-- OrderPopUp -->
 		<div class="PopUpWrapper">
 			<div class="PopUpContainer">
-			<div class="fast_car_booking">
-    			<div class="car_booking_header">Заказ Автомобиля</div> 
+				<div class="fast_car_booking">
+    				<div class="car_booking_header">Заказ Автомобиля</div> 
 						<div class="car_booking_name">
 							<label>Имя</label>
 							<input class="InputOnWhiteTextaR OrderNameFast" id="OrderNameFast" type="text">
