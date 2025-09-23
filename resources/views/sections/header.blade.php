@@ -54,7 +54,7 @@
 				<li><a class="" href="/contacts/">Контакты</a></li>
 			</ul>
       </div>
-    </header
+    </header>
 	
 	@php if ($Detect->isMobile() || $Detect->isTablet()) { @endphp
 	
