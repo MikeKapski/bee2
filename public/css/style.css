@@ -458,7 +458,7 @@ a {
         .central_block{
             display: grid;
             grid-template-columns: 270px auto;
-            padding:40px 135px;
+            padding:40px 0px;
             gap:32px;
         }
 
