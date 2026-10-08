@@ -18,3 +18,7 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+/.env
+/vendor/
+/storage/framework/views/

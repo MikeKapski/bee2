@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="defaultpage padd_0_135">
-        <div class="htmlpageblock padd_0_135">
+        <div class="htmlpageblock">
 
             <div class="Breadrumps">
                 {!! $BreadCrumps !!}

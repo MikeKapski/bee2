@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="defaultpage padd_0_135">
-        <div class="htmlpageblock padd_0_135">
+        <div class="htmlpageblock">
 
             <div class="Breadrumps">
                 {!! $BreadCrumps !!}
@@ -111,7 +111,7 @@
 					<h3 class="yeloow_header_h3">Оплата</h3>
 					<div class="uslovia-content-row-list">
 						<div>Оплата производится за весь период аренды автомобиля</div>
-						<div>В случае задержки возврата автомобиля более чем на 1.5 час, Арендатор должен оплатить стоимость половины суток аренды, из расчёта 50% от действующего суточного тарифа.</div>
+						<div>В случае задержки возврата автомобиля более чем на 2 час, Арендатор должен оплатить стоимость суток аренды, из расчёта от действующего суточного тарифа.</div>
 					</div>
 					
 					<h3 class="yeloow_header_h3">Форма оплаты</h3>

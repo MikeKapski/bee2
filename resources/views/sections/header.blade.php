@@ -28,7 +28,7 @@
 				<a href="https://wa.me/74957903633"><div class="whatsapp_call"></div></a>
 			</div>
             <div class="HeaderItem">
-				<a href="https://t.me/beecars1"><div class="telegram_call"></div></a>
+				<a href="https://t.me/beecars_prokat"><div class="telegram_call"></div></a>
 			</div>
             <!--<div class="HeaderItem" id="menu">
                 <div id="butoon-header">

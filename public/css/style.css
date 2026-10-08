@@ -1665,8 +1665,29 @@ a {
     
     
 
-
-
+    /*Table*/
+    .table_2_column{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 10px 10px;
+        background: #F8F8F8;
+        border-radius: 10px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 124%;
+        letter-spacing: -0.01em;
+        color: var(--color-black);
+    }
+    .table_2_column_row{
+        display: grid;
+        grid-template-columns: 300px auto;
+        padding-bottom: 3px;
+    }
+    .table_2_column_head{
+        font-weight:600;
+    }
     
 
 
@@ -1894,7 +1915,6 @@ a {
     .padd_20_10{padding:20px 10px;}
 
     .padd_b_20{padding-bottom: 20px;}
-
     
 
     /*Borders*/

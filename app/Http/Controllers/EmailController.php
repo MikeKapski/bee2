@@ -207,7 +207,8 @@ use PDF;
 				->subject($maildata['Theme'])
 				->from('info@bee-cars.ru', 'Би Карс')
 				//->cc('webbsu@mail.ru')
-				->setBody($maildata['MailBody'], 'text/html');
+				//->setBody($maildata['MailBody'], 'text/html');
+				->html($maildata['MailBody']);
 			});
 		}
 		

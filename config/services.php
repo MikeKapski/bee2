@@ -35,4 +35,11 @@ return [
         ],
     ],
 
+    'site_leads' => [
+        'url' => env('SITE_LEADS_WEBHOOK_URL', 'https://svergazov.ru/leads/api/webhook'),
+        'secret' => env('SITE_LEADS_WEBHOOK_SECRET'),
+        'email' => env('SITE_LEADS_EMAIL', 'info@bee-cars.ru'),
+        'from' => env('SITE_LEADS_FROM', env('MAIL_FROM_ADDRESS', 'no-reply@bee-cars.ru')),
+    ],
+
 ];

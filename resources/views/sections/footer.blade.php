@@ -53,5 +53,13 @@
             </div>
         </div>
 
-        
+        <script>
+  window.WAMM_W1_WidgetConfig = [
+    { type: "WhatsApp", url: "https://wa.me/", id: "+74957903633" },
+    { type: "Telegram", url: "https://t.me/", id: "+74957903633" },
+    { type: "Phone", url: "tel:", id: "+74957903633" },
+    { type: "MAX", url: "https://max.ru/", id: "id9731003518_bot" }
+  ];
+</script>
+<script src="https://wamm.chat/widget/buttons" data-color="#ff7b00"></script>
     </footer>
