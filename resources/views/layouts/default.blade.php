@@ -41,7 +41,7 @@
 		<meta name="theme-color" content="#ffffff">
 			
 		<!-- main style -->
-		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/css/style.css?v={{ filemtime(public_path('css/style.css')) }}" />
 		
 			
 
