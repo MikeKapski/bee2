@@ -1185,15 +1185,27 @@ a {
 
 
 
-        .car_booking_ur_text{
-            position: relative;
-            width: 100%;
-            padding: 10px 0px;
-            font-weight: 400;
-            color: var(--color-black);
-            letter-spacing: -0.01em;
-            font-size: 12px;
-            font-family: var(--font-family);
+        .booking-consent-label{
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            min-height: 44px;
+            padding: 10px 0;
+            font-size: 13px;
+            line-height: 1.4;
+            cursor: pointer;
+        }
+        .booking-consent-checkbox{
+            flex: 0 0 20px;
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            accent-color: #551A8B;
+            cursor: pointer;
+        }
+        .booking-consent-checkbox:focus-visible{
+            outline: 2px solid #551A8B;
+            outline-offset: 2px;
         }
 
         /*Fast Car Booking*/
@@ -1490,7 +1502,8 @@ a {
         right: 9px;
     }
     .YelowOrd{
-        outline: 0;
+        display: block;
+        width: 100%;
         border: 0;
         padding: 15px 10px;
         box-sizing: border-box;
@@ -1501,14 +1514,29 @@ a {
         font-weight: 700;
         text-align: center;
         font-size: 15px;
+        font-family: var(--font-family);
         box-sizing: border-box;
         cursor: pointer;
         background: var(--yelow-background);
         border-radius: 10px;
     }
+    .YelowOrd:focus-visible{
+        outline: 2px solid #551A8B;
+        outline-offset: 2px;
+    }
+    .YelowOrd:disabled{
+        background: #d4d4d4;
+        color: #555;
+        cursor: not-allowed;
+    }
     .ApplicationYes{
         background: #FFF;
         color: #03af7d;
+    }
+    .YelowOrd.ApplicationYes:disabled{
+        background: #FFF;
+        color: #03af7d;
+        cursor: default;
     }
 
     /*AboutPage*/

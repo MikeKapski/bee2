@@ -62,12 +62,9 @@
                             <input class="InputOnWhiteTextaR OrderPhoneFast" id="OrderPhoneFast" placeholder="+7 (xxx) xxx-xx-xx" type="text">
                             <div class="InputOnWhiteTextaRError">Необходимо заполнить поле</div>
                         </div>
+                        @include('components.site.bookingconsent')
                         <div class="car_booking_button">
-                            <div class="YelowOrd FastOrder" data-carid="1">Забронировать</div>
-                        </div>
-                        <div class="car_booking_ur_text">
-                            Нажимая на кнопку "Забронировать" вы даете согласие на обработку персональных данных а так же соглашатесь.
-                            с <a href="/policy" target="_blank">Политикой Конфиденциальности</a> и с <a href="/uslovia-prokata" target="_blank">условиями аренды и правилами пользования автомобилями</a>
+                            <button type="button" class="YelowOrd FastOrder" data-carid="1" disabled>Забронировать</button>
                         </div>
                 </div>
 				<div class="PopUpClose"></div>
@@ -90,7 +87,7 @@
 		<script defer src="/js/lightslider.min.js"></script>		
 		<script defer src="/js/jquery.jscrollpane.min.js"></script>		
 		<!--<script defer src="https://cdn.jsdelivr.net/npm/moment@2.29.1/locale/ru.js"></script>-->
-		<script type="text/javascript" src="/js/script.js"></script>  
+		<script type="text/javascript" src="/js/script.js?v={{ filemtime(public_path('js/script.js')) }}"></script>
 		
 		@stack('scripts')	
 		

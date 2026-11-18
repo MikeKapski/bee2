@@ -66,12 +66,9 @@
                             <div class="price_total">Итого: <span class="price_col">{{ $CarInfo['Price_1'] }}</span> &#8381; за <span class="days_col">1</span> сут.</div>
                             <div class="price_day"><span>{{ $CarInfo['Price_1'] }}</span>  &#8381; в сутки</div>
                         </div>
+                        @include('components.site.bookingconsent')
                         <div class="car_booking_button">
-                            <div class="YelowOrd FastOrderSingle" data-pod="2" data-carid="{{ $CarInfo['ID'] }}">Забронировать</div>
-                        </div>
-                        <div class="car_booking_ur_text">
-                            Нажимая на кнопку "Забронировать" вы даете согласие на обработку персональных данных а так же соглашатесь.
-                            с <a href="/policy" target="_blank">Политикой Конфиденциальности</a> и с <a href="/uslovia-prokata" target="_blank">условиями аренды и правилами пользования автомобилями</a>
+                            <button type="button" class="YelowOrd FastOrderSingle" data-pod="2" data-carid="{{ $CarInfo['ID'] }}" disabled>Забронировать</button>
                         </div>
                     </div>
                 </div>

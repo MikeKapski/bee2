@@ -447,6 +447,8 @@ jQuery(document).ready(function($) {
 	}
 	//Показать Всплывающее окно заказа Авто
 	function ShowFastPopUp(){
+		$(".PopUpWrapper .YelowOrd").addClass("FastOrder").removeClass("ApplicationYes").text("Забронировать");
+		$(".PopUpWrapper .booking-consent-checkbox").prop('checked', false).trigger('change');
 		$(".PopUpWrapper").css('display','flex');
 	}
 	function HideFastPopUp(){
@@ -1105,8 +1107,16 @@ jQuery(document).ready(function($) {
 					$(".ContactsFormOptions").removeClass("ContactsFormctiveP");
 				}	
 			});
+			$(document).on('change', '.booking-consent-checkbox', function(){
+				$(this).closest('.fast_car_booking, .car_booking')
+					.find('.FastOrder, .FastOrderSingle')
+					.prop('disabled', !this.checked);
+			});
 			//Booking Car
 			$(document).on(event, '.FastOrderSingle', function(){
+				if(this.disabled || !$(this).closest('.car_booking').find('.booking-consent-checkbox').prop('checked')){
+					return;
+				}
 
 				let CarID = $(this).attr("data-carid");
 				
@@ -1138,13 +1148,14 @@ jQuery(document).ready(function($) {
 						DateStartDate:DateStartDate,
 						DateStartEnd:DateStartEnd,
 						CarID:CarID,
+						Consent:1,
 					};	
 					result = AjaxPostActionResult(data,ajaxurl);
 					if(result != ""){
 						$("#OrderName").removeClass("redborder");
 						$("#OrderPhone").removeClass("redborder");
 						ym(49189252,'reachGoal','send_order');
-						$(this).removeClass("FastOrderSingle").addClass("ApplicationYes").html("Заявка отправлена");
+						$(this).removeClass("FastOrderSingle").addClass("ApplicationYes").prop('disabled', true).html("Заявка отправлена");
 						console.log(data);
 					}
 				}
@@ -1155,7 +1166,7 @@ jQuery(document).ready(function($) {
 				//Show
 				$(document).on(event, '.FastDesctop', function(){
 					let CarID = $(this).attr("data-carid");
-					$(".FastOrder").attr("data-carid",CarID);
+					$(".PopUpWrapper .YelowOrd").attr("data-carid",CarID);
 					ShowFastPopUp();
 					$(".OrderPhoneFast").each(function() {
 						$(this).mask("+7 (999) 999-99-99",{placeholder:"+7 (xxx) xxx-xx-xx"});
@@ -1188,6 +1199,9 @@ jQuery(document).ready(function($) {
 					let CarID = $(this).attr("data-carid");
 
 					let OrderNameWrap   = $(this).parent("div.car_booking_button").parent("div.fast_car_booking");
+					if(this.disabled || !OrderNameWrap.find('.booking-consent-checkbox').prop('checked')){
+						return;
+					}
 					let OrderNameBlock  = OrderNameWrap.children("div.car_booking_name").children("input.OrderNameFast");
 					let OrderPhoneBlock = OrderNameWrap.children("div.car_booking_phone").children("input.OrderPhoneFast");
 				
@@ -1219,13 +1233,14 @@ jQuery(document).ready(function($) {
 							DateStartDate:DateStartDate,
 							DateStartEnd:DateStartEnd,
 							CarID:CarID,
+							Consent:1,
 						};	
 						result = AjaxPostActionResult(data,ajaxurl);
 						if(result != ""){
 							OrderNameBlock.removeClass("redborder");
 							OrderPhoneBlock.removeClass("redborder");
 							ym(49189252,'reachGoal','send_order'); //поменять на событие быстрого заказа
-							$(this).removeClass("OrderPhoneFast").addClass("ApplicationYes").html("Заявка отправлена");
+							$(this).removeClass("FastOrder").addClass("ApplicationYes").prop('disabled', true).html("Заявка отправлена");
 							console.log(data);
 						}
 					}

@@ -129,6 +129,10 @@ use CarsBrands;
             //Заказ Автомобиля
             if($Action == "OrderCar"){
 
+                if(!$request->boolean('Consent')){
+                    return response('', 422);
+                }
+
                 $DateStartDate  = $request->input('DateStartDate');
 				$DateStartEnd   = $request->input('DateStartEnd');
                 $CarID          = $request->input('CarID');
@@ -291,6 +295,10 @@ use CarsBrands;
 			/*Быстрый заказ автомобиля*/
 
 			if($Action == "OrderCarFast"){
+
+                if(!$request->boolean('Consent')){
+                    return response('', 422);
+                }
 
                 $CarID          = $request->input('CarID');
                 $OrderName      = $request->input('OrderName');
